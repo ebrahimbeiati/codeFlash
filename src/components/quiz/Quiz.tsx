@@ -2,15 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
-import { Button } from '../ui/Button';
-import { cn } from '@/lib/utils';
-import { CheckCircle2, XCircle } from 'lucide-react';
-import type { ButtonProps } from '../ui/Button';
-import type { CardProps } from '../ui/Card';
-import type { HTMLAttributes } from 'react';
-import type { LucideIcon } from 'lucide-react';
 import confetti from 'canvas-confetti';
+import { cn } from '@/lib/utils';
 
 interface Question {
   id: string;

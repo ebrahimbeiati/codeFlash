@@ -1,0 +1,1336 @@
+import { LearningPath } from '@/types/learningPath';
+import { FlashcardSet } from '@/types/flashcard';
+import { Quiz } from '@/types/quiz';
+
+export const javascriptFundamentals: LearningPath = {
+  id: 'javascript-fundamentals',
+  title: 'JavaScript Fundamentals',
+  description: 'Learn the basics of JavaScript programming',
+  level: 'beginner',
+  category: 'programming',
+  createdAt: new Date(),
+  updatedAt: new Date(),
+  sets: [
+    {
+      id: 'js-beginner',
+      title: 'JavaScript Basics',
+      description: 'Core JavaScript concepts and syntax',
+      category: 'javascript',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      cards: [
+        {
+          id: 'js-b1',
+          front: 'What is JavaScript?',
+          back: 'JavaScript is a high-level, interpreted programming language that enables interactive web pages. It is an essential part of web applications and can be used for both front-end and back-end development.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b2',
+          front: 'What are the basic data types in JavaScript?',
+          back: 'JavaScript has 7 primitive data types: String, Number, Boolean, Undefined, Null, Symbol, and BigInt. Objects are the only non-primitive data type.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b3',
+          front: 'What is the difference between let, const, and var?',
+          back: 'let and const are block-scoped, while var is function-scoped. const cannot be reassigned, while let and var can. var declarations are hoisted, while let and const are not.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b4',
+          front: 'What is hoisting in JavaScript?',
+          back: 'Hoisting is JavaScript\'s behavior of moving declarations to the top of their scope. Variable declarations using var are hoisted, while let and const are not. Function declarations are also hoisted.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b5',
+          front: 'What is the difference between == and ===?',
+          back: '== performs type coercion before comparison, while === checks both value and type without coercion. === is generally preferred as it\'s more predictable.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b6',
+          front: 'What is a function?',
+          back: 'A function is a reusable block of code that performs a specific task. Functions can take parameters and return values. They are first-class objects in JavaScript.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b7',
+          front: 'What is an array?',
+          back: 'An array is an ordered collection of values. Arrays can store multiple values of different types and are zero-indexed. They have built-in methods for manipulation.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b8',
+          front: 'What is an object?',
+          back: 'An object is a collection of key-value pairs. Objects can store multiple values as properties and methods. They are used to represent real-world entities.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b9',
+          front: 'What is a string?',
+          back: 'A string is a sequence of characters. Strings are immutable and have various methods for manipulation. They can be created using single or double quotes.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b10',
+          front: 'What is a number?',
+          back: 'Numbers in JavaScript are 64-bit floating point values. They can be integers or decimals. JavaScript also has special number values like Infinity and NaN.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b11',
+          front: 'What is a boolean?',
+          back: 'A boolean is a logical data type that can have only two values: true or false. Booleans are often used in conditional statements and loops.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b12',
+          front: 'What is null?',
+          back: 'null is a special value that represents the intentional absence of any object value. It is a primitive value and is often used to indicate that a variable has no value.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b13',
+          front: 'What is undefined?',
+          back: 'undefined is a special value that represents an uninitialized variable. It is a primitive value and is the default value of variables that have been declared but not assigned.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b14',
+          front: 'What is a conditional statement?',
+          back: 'A conditional statement is a block of code that executes only if a specified condition is true. JavaScript has if, else if, else, and switch statements.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b15',
+          front: 'What is a loop?',
+          back: 'A loop is a block of code that executes repeatedly until a specified condition is met. JavaScript has for, while, do...while, and for...of loops.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b16',
+          front: 'What is the difference between for and while loops?',
+          back: 'for loops are used when you know how many times you want to loop. while loops are used when you don\'t know how many times you need to loop.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b17',
+          front: 'What is the difference between break and continue?',
+          back: 'break exits a loop completely, while continue skips the current iteration and continues with the next one.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b18',
+          front: 'What is the difference between function declaration and function expression?',
+          back: 'Function declarations are hoisted and can be called before they are defined. Function expressions are not hoisted and must be defined before they are called.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b19',
+          front: 'What is the difference between parameters and arguments?',
+          back: 'Parameters are the variables listed in the function definition. Arguments are the actual values passed to the function when it is called.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b20',
+          front: 'What is the return statement?',
+          back: 'The return statement ends function execution and specifies a value to be returned to the function caller.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b21',
+          front: 'What is the difference between local and global variables?',
+          back: 'Local variables are declared inside a function and can only be accessed within that function. Global variables are declared outside any function and can be accessed anywhere.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b22',
+          front: 'What is the difference between let and const?',
+          back: 'let allows you to reassign values, while const does not. Both are block-scoped and not hoisted.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b23',
+          front: 'What is the difference between null and undefined?',
+          back: 'null is an explicit assignment of no value, while undefined means a variable has been declared but not assigned a value.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b24',
+          front: 'What is the difference between == and ===?',
+          back: '== performs type coercion before comparison, while === checks both value and type without coercion.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b25',
+          front: 'What is the difference between != and !==?',
+          back: '!= performs type coercion before comparison, while !== checks both value and type without coercion.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b26',
+          front: 'What is the difference between && and ||?',
+          back: '&& returns true if both operands are true, while || returns true if either operand is true.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b27',
+          front: 'What is the difference between ! and !!?',
+          back: '! converts a value to its boolean opposite, while !! converts a value to its boolean equivalent.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b28',
+          front: 'What is the difference between ++ and --?',
+          back: '++ increments a value by 1, while -- decrements a value by 1.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b29',
+          front: 'What is the difference between += and -=?',
+          back: '+= adds a value to a variable, while -= subtracts a value from a variable.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-b30',
+          front: 'What is the difference between *= and /=?',
+          back: '*= multiplies a variable by a value, while /= divides a variable by a value.',
+          category: 'javascript',
+          difficulty: 'easy',
+          reviewCount: 0,
+          correctCount: 0
+        }
+      ]
+    },
+    {
+      id: 'js-intermediate',
+      title: 'Intermediate JavaScript',
+      description: 'Advanced JavaScript features and patterns',
+      category: 'javascript',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      cards: [
+        {
+          id: 'js-i1',
+          front: 'What is closure in JavaScript?',
+          back: 'A closure is a function that has access to variables from its outer lexical scope, even after the outer function has returned. It maintains access to its scope chain.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i2',
+          front: 'What is the "this" keyword?',
+          back: 'The this keyword refers to the object that is currently executing the code. Its value depends on how a function is called: global context, object method, constructor, or event handler.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i3',
+          front: 'What is the difference between call(), apply(), and bind()?',
+          back: 'All three methods are used to set the this value. call() invokes the function with given this and arguments. apply() is similar but takes arguments as an array. bind() returns a new function with fixed this.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i4',
+          front: 'What is a promise?',
+          back: 'A promise is an object representing the eventual completion or failure of an asynchronous operation. It has three states: pending, fulfilled, or rejected.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i5',
+          front: 'What is async/await?',
+          back: 'async/await is a syntax for handling promises. async functions return promises, and await pauses execution until the promise resolves. It makes asynchronous code look synchronous.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i6',
+          front: 'What is the event loop?',
+          back: 'The event loop is a mechanism that allows JavaScript to handle asynchronous operations. It continuously checks the call stack and message queue, executing callbacks when the stack is empty.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i7',
+          front: 'What is the difference between synchronous and asynchronous code?',
+          back: 'Synchronous code executes in sequence, blocking until each operation completes. Asynchronous code allows other operations to continue while waiting for an operation to complete.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i8',
+          front: 'What is a callback function?',
+          back: 'A callback function is a function passed as an argument to another function, to be executed after the main function has finished its execution.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i9',
+          front: 'What is the spread operator?',
+          back: 'The spread operator (...) allows an iterable to be expanded in places where multiple arguments or elements are expected. It can be used with arrays, objects, and function arguments.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i10',
+          front: 'What is destructuring?',
+          back: 'Destructuring is a JavaScript expression that allows you to extract values from arrays or properties from objects into distinct variables.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i11',
+          front: 'What is the difference between map(), filter(), and reduce()?',
+          back: 'map() transforms each element in an array. filter() creates a new array with elements that pass a test. reduce() reduces an array to a single value by executing a reducer function.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i12',
+          front: 'What is the difference between forEach() and map()?',
+          back: 'forEach() executes a function for each element but doesn\'t return anything. map() creates a new array with the results of calling a function for every array element.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i13',
+          front: 'What is the difference between slice() and splice()?',
+          back: 'slice() returns a shallow copy of a portion of an array without modifying the original. splice() changes the contents of an array by removing or replacing elements and/or adding new elements.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i14',
+          front: 'What is the difference between Object.freeze() and Object.seal()?',
+          back: 'Object.freeze() makes an object immutable, preventing any changes to its properties. Object.seal() prevents adding or removing properties but allows modifying existing ones.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i15',
+          front: 'What is the difference between Object.keys() and Object.entries()?',
+          back: 'Object.keys() returns an array of a given object\'s own enumerable property names. Object.entries() returns an array of a given object\'s own enumerable string-keyed property [key, value] pairs.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i16',
+          front: 'What is the difference between Object.assign() and the spread operator?',
+          back: 'Both can be used to copy objects, but Object.assign() modifies the target object, while the spread operator creates a new object. The spread operator is generally preferred for its immutability.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i17',
+          front: 'What is the difference between Array.from() and the spread operator?',
+          back: 'Array.from() can convert array-like objects to arrays and accepts a mapping function. The spread operator can only spread iterable objects into arrays.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i18',
+          front: 'What is the difference between Array.isArray() and instanceof Array?',
+          back: 'Array.isArray() is more reliable as it works across different frames/windows. instanceof Array can fail when checking arrays from different contexts.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i19',
+          front: 'What is the difference between String.prototype.slice() and String.prototype.substring()?',
+          back: 'Both extract parts of a string, but slice() can use negative indices and doesn\'t swap parameters if start > end. substring() swaps parameters if start > end and treats negative indices as 0.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-i20',
+          front: 'What is the difference between String.prototype.replace() and String.prototype.replaceAll()?',
+          back: 'replace() replaces only the first occurrence of a pattern. replaceAll() replaces all occurrences of a pattern in a string.',
+          category: 'javascript',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        }
+      ]
+    },
+    {
+      id: 'js-advanced',
+      title: 'Advanced JavaScript',
+      description: 'Complex JavaScript patterns and best practices',
+      category: 'javascript',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      cards: [
+        {
+          id: 'js-a1',
+          front: 'What is the prototype chain?',
+          back: 'The prototype chain is how JavaScript implements inheritance. Each object has a prototype object, and objects inherit properties and methods from their prototype chain.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a2',
+          front: 'What is the difference between classical and prototypal inheritance?',
+          back: 'Classical inheritance uses classes and extends them, while prototypal inheritance uses objects and delegates to their prototypes. JavaScript uses prototypal inheritance.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a3',
+          front: 'What is the difference between Object.create() and new?',
+          back: 'Object.create() creates a new object with the specified prototype object. new creates an instance of a constructor function, which sets up the prototype chain.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a4',
+          front: 'What is the difference between Object.getPrototypeOf() and Object.setPrototypeOf()?',
+          back: 'Object.getPrototypeOf() returns the prototype of an object. Object.setPrototypeOf() sets the prototype of an object to another object or null.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a5',
+          front: 'What is the difference between Object.defineProperty() and Object.defineProperties()?',
+          back: 'Object.defineProperty() defines a new property or modifies an existing property on an object. Object.defineProperties() defines multiple properties on an object.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a6',
+          front: 'What is the difference between Object.getOwnPropertyDescriptor() and Object.getOwnPropertyDescriptors()?',
+          back: 'Object.getOwnPropertyDescriptor() returns a property descriptor for an own property. Object.getOwnPropertyDescriptors() returns all own property descriptors of an object.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a7',
+          front: 'What is the difference between Object.preventExtensions() and Object.seal()?',
+          back: 'Object.preventExtensions() prevents new properties from being added to an object. Object.seal() prevents new properties from being added and existing properties from being deleted.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a8',
+          front: 'What is the difference between Object.freeze() and Object.seal()?',
+          back: 'Object.freeze() makes an object immutable, preventing any changes to its properties. Object.seal() prevents adding or removing properties but allows modifying existing ones.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a9',
+          front: 'What is the difference between Object.is() and ===?',
+          back: 'Object.is() is similar to === but handles special cases like NaN and -0 differently. Object.is(NaN, NaN) is true, while NaN === NaN is false.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a10',
+          front: 'What is the difference between Object.keys() and Object.getOwnPropertyNames()?',
+          back: 'Object.keys() returns an array of a given object\'s own enumerable property names. Object.getOwnPropertyNames() returns an array of all own property names, including non-enumerable ones.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a11',
+          front: 'What is the difference between Object.entries() and Object.fromEntries()?',
+          back: 'Object.entries() converts an object to an array of [key, value] pairs. Object.fromEntries() converts an array of [key, value] pairs back to an object.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a12',
+          front: 'What is the difference between Object.values() and Object.keys()?',
+          back: 'Object.values() returns an array of a given object\'s own enumerable property values. Object.keys() returns an array of a given object\'s own enumerable property names.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a13',
+          front: 'What is the difference between Object.getOwnPropertySymbols() and Object.getOwnPropertyNames()?',
+          back: 'Object.getOwnPropertySymbols() returns an array of all symbol properties found directly on an object. Object.getOwnPropertyNames() returns an array of all string properties found directly on an object.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a14',
+          front: 'What is the difference between Object.isExtensible() and Object.isSealed()?',
+          back: 'Object.isExtensible() determines if an object is extensible. Object.isSealed() determines if an object is sealed.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a15',
+          front: 'What is the difference between Object.isFrozen() and Object.isSealed()?',
+          back: 'Object.isFrozen() determines if an object is frozen. Object.isSealed() determines if an object is sealed.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a16',
+          front: 'What is the difference between Object.getOwnPropertyDescriptor() and Object.getOwnPropertyDescriptors()?',
+          back: 'Object.getOwnPropertyDescriptor() returns a property descriptor for an own property. Object.getOwnPropertyDescriptors() returns all own property descriptors of an object.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a17',
+          front: 'What is the difference between Object.defineProperty() and Object.defineProperties()?',
+          back: 'Object.defineProperty() defines a new property or modifies an existing property on an object. Object.defineProperties() defines multiple properties on an object.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a18',
+          front: 'What is the difference between Object.getPrototypeOf() and Object.setPrototypeOf()?',
+          back: 'Object.getPrototypeOf() returns the prototype of an object. Object.setPrototypeOf() sets the prototype of an object to another object or null.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a19',
+          front: 'What is the difference between Object.create() and new?',
+          back: 'Object.create() creates a new object with the specified prototype object. new creates an instance of a constructor function, which sets up the prototype chain.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'js-a20',
+          front: 'What is the difference between classical and prototypal inheritance?',
+          back: 'Classical inheritance uses classes and extends them, while prototypal inheritance uses objects and delegates to their prototypes. JavaScript uses prototypal inheritance.',
+          category: 'javascript',
+          difficulty: 'hard',
+          reviewCount: 0,
+          correctCount: 0
+        }
+      ]
+    }
+  ],
+  quiz: {
+    id: 'js-quiz',
+    title: 'JavaScript Quiz',
+    description: 'Test your knowledge of JavaScript fundamentals',
+    category: 'javascript',
+    passingScore: 70,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    questions: [
+      {
+        id: 'q1',
+        question: 'What is JavaScript?',
+        options: [
+          'A markup language',
+          'A programming language',
+          'A styling language',
+          'A database language'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q2',
+        question: 'Which keyword is used to declare a variable in JavaScript?',
+        options: [
+          'variable',
+          'var',
+          'v',
+          'declare'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q3',
+        question: 'What is the difference between let, const, and var?',
+        options: [
+          'They are all the same',
+          'let and const are block-scoped, var is function-scoped',
+          'let is for numbers, const is for strings, var is for booleans',
+          'let is for variables, const is for constants, var is for arrays'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q4',
+        question: 'What is hoisting in JavaScript?',
+        options: [
+          'Moving variables to the bottom of their scope',
+          'Moving declarations to the top of their scope',
+          'Moving functions to the bottom of their scope',
+          'Moving objects to the top of their scope'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q5',
+        question: 'What is the difference between == and ===?',
+        options: [
+          'They are the same',
+          '== performs type coercion, === checks both value and type',
+          '== is for numbers, === is for strings',
+          '== is for variables, === is for constants'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q6',
+        question: 'What is closure in JavaScript?',
+        options: [
+          'A way to close a function',
+          'A function with access to its outer scope',
+          'A way to end a program',
+          'A way to close a file'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q7',
+        question: "What is the 'this' keyword?",
+        options: [
+          'A way to refer to the current function',
+          'A reference to the current object',
+          'A way to refer to the next function',
+          'A way to refer to the previous function'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q8',
+        question: 'What is the difference between call(), apply(), and bind()?',
+        options: [
+          'They are all the same',
+          'Different ways to set the this value',
+          'Different ways to call a function',
+          'Different ways to bind a function'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q9',
+        question: 'What is a promise?',
+        options: [
+          'A way to make a function call',
+          'An object representing an asynchronous operation',
+          'A way to create a variable',
+          'A way to create an object'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q10',
+        question: 'What is async/await?',
+        options: [
+          'A way to create a function',
+          'A syntax for handling promises',
+          'A way to create a variable',
+          'A way to create an object'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q11',
+        question: 'What is the event loop?',
+        options: [
+          'A way to create a loop',
+          'A mechanism for handling asynchronous operations',
+          'A way to create a function',
+          'A way to create a variable'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q12',
+        question: 'What is the difference between synchronous and asynchronous code?',
+        options: [
+          'They are the same',
+          'Synchronous executes in sequence, asynchronous allows other operations to continue',
+          'Synchronous is for variables, asynchronous is for functions',
+          'Synchronous is for numbers, asynchronous is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q13',
+        question: 'What is a callback function?',
+        options: [
+          'A way to create a function',
+          'A function passed as an argument to another function',
+          'A way to create a variable',
+          'A way to create an object'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q14',
+        question: 'What is the difference between null and undefined?',
+        options: [
+          'They are the same',
+          'undefined is unassigned, null is explicitly assigned',
+          'undefined is for numbers, null is for strings',
+          'undefined is for variables, null is for functions'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q15',
+        question: 'What is the difference between function declaration and function expression?',
+        options: [
+          'They are the same',
+          'Declaration is hoisted, expression is not',
+          'Declaration is for variables, expression is for functions',
+          'Declaration is for numbers, expression is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q16',
+        question: 'What is the spread operator?',
+        options: [
+          'A way to create a function',
+          'A way to expand iterables',
+          'A way to create a variable',
+          'A way to create an object'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q17',
+        question: 'What is destructuring?',
+        options: [
+          'A way to create a function',
+          'A way to extract values from arrays or objects',
+          'A way to create a variable',
+          'A way to create an object'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q18',
+        question: 'What is the difference between map(), filter(), and reduce()?',
+        options: [
+          'They are the same',
+          'Different array methods for transformation, filtering, and reduction',
+          'Different ways to create a function',
+          'Different ways to create a variable'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q19',
+        question: 'What is the difference between forEach() and map()?',
+        options: [
+          'They are the same',
+          'forEach() executes for each element, map() creates a new array',
+          'forEach() is for variables, map() is for functions',
+          'forEach() is for numbers, map() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q20',
+        question: 'What is the difference between slice() and splice()?',
+        options: [
+          'They are the same',
+          'slice() returns a copy, splice() modifies the array',
+          'slice() is for variables, splice() is for functions',
+          'slice() is for numbers, splice() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q21',
+        question: 'What is the prototype chain?',
+        options: [
+          'A way to create a function',
+          'How JavaScript implements inheritance',
+          'A way to create a variable',
+          'A way to create an object'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q22',
+        question: 'What is the difference between classical and prototypal inheritance?',
+        options: [
+          'They are the same',
+          'Classical uses classes, prototypal uses objects',
+          'Classical is for variables, prototypal is for functions',
+          'Classical is for numbers, prototypal is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q23',
+        question: 'What is the difference between Object.create() and new?',
+        options: [
+          'They are the same',
+          'Object.create() creates with prototype, new creates instance',
+          'Object.create() is for variables, new is for functions',
+          'Object.create() is for numbers, new is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q24',
+        question: 'What is the difference between Object.freeze() and Object.seal()?',
+        options: [
+          'They are the same',
+          'freeze() makes immutable, seal() prevents adding/removing properties',
+          'freeze() is for variables, seal() is for functions',
+          'freeze() is for numbers, seal() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q25',
+        question: 'What is the difference between Object.keys() and Object.entries()?',
+        options: [
+          'They are the same',
+          'keys() returns property names, entries() returns [key, value] pairs',
+          'keys() is for variables, entries() is for functions',
+          'keys() is for numbers, entries() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q26',
+        question: 'What is the difference between Object.assign() and the spread operator?',
+        options: [
+          'They are the same',
+          'assign() modifies target, spread creates new object',
+          'assign() is for variables, spread is for functions',
+          'assign() is for numbers, spread is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q27',
+        question: 'What is the difference between Array.from() and the spread operator?',
+        options: [
+          'They are the same',
+          'from() can convert array-like objects, spread only works with iterables',
+          'from() is for variables, spread is for functions',
+          'from() is for numbers, spread is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q28',
+        question: 'What is the difference between Array.isArray() and instanceof Array?',
+        options: [
+          'They are the same',
+          'isArray() is more reliable across contexts',
+          'isArray() is for variables, instanceof is for functions',
+          'isArray() is for numbers, instanceof is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q29',
+        question: 'What is the difference between String.prototype.slice() and String.prototype.substring()?',
+        options: [
+          'They are the same',
+          'slice() can use negative indices, substring() swaps parameters',
+          'slice() is for variables, substring() is for functions',
+          'slice() is for numbers, substring() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q30',
+        question: 'What is the difference between String.prototype.replace() and String.prototype.replaceAll()?',
+        options: [
+          'They are the same',
+          'replace() replaces first occurrence, replaceAll() replaces all',
+          'replace() is for variables, replaceAll() is for functions',
+          'replace() is for numbers, replaceAll() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q31',
+        question: 'What is the difference between String.prototype.trim() and String.prototype.trimStart()?',
+        options: [
+          'They are the same',
+          'trim() removes from both ends, trimStart() removes from start',
+          'trim() is for variables, trimStart() is for functions',
+          'trim() is for numbers, trimStart() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q32',
+        question: 'What is the difference between String.prototype.padStart() and String.prototype.padEnd()?',
+        options: [
+          'They are the same',
+          'padStart() pads beginning, padEnd() pads end',
+          'padStart() is for variables, padEnd() is for functions',
+          'padStart() is for numbers, padEnd() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q33',
+        question: 'What is the difference between String.prototype.includes() and String.prototype.indexOf()?',
+        options: [
+          'They are the same',
+          'includes() returns boolean, indexOf() returns index',
+          'includes() is for variables, indexOf() is for functions',
+          'includes() is for numbers, indexOf() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q34',
+        question: 'What is the difference between String.prototype.startsWith() and String.prototype.endsWith()?',
+        options: [
+          'They are the same',
+          'startsWith() checks beginning, endsWith() checks end',
+          'startsWith() is for variables, endsWith() is for functions',
+          'startsWith() is for numbers, endsWith() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q35',
+        question: 'What is the difference between String.prototype.toLowerCase() and String.prototype.toUpperCase()?',
+        options: [
+          'They are the same',
+          'toLowerCase() converts to lowercase, toUpperCase() converts to uppercase',
+          'toLowerCase() is for variables, toUpperCase() is for functions',
+          'toLowerCase() is for numbers, toUpperCase() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q36',
+        question: 'What is the difference between String.prototype.split() and String.prototype.match()?',
+        options: [
+          'They are the same',
+          'split() splits into array, match() retrieves regex matches',
+          'split() is for variables, match() is for functions',
+          'split() is for numbers, match() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q37',
+        question: 'What is the difference between String.prototype.concat() and the + operator?',
+        options: [
+          'They are the same',
+          'concat() joins strings, + operator is more commonly used',
+          'concat() is for variables, + is for functions',
+          'concat() is for numbers, + is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q38',
+        question: 'What is the difference between String.prototype.repeat() and String.prototype.padStart()?',
+        options: [
+          'They are the same',
+          'repeat() creates copies, padStart() pads to length',
+          'repeat() is for variables, padStart() is for functions',
+          'repeat() is for numbers, padStart() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q39',
+        question: 'What is the difference between String.prototype.trim() and String.prototype.trimEnd()?',
+        options: [
+          'They are the same',
+          'trim() removes from both ends, trimEnd() removes from end',
+          'trim() is for variables, trimEnd() is for functions',
+          'trim() is for numbers, trimEnd() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q40',
+        question: 'What is the difference between String.prototype.search() and String.prototype.match()?',
+        options: [
+          'They are the same',
+          'search() returns index, match() returns array of matches',
+          'search() is for variables, match() is for functions',
+          'search() is for numbers, match() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q41',
+        question: 'What is the difference between String.prototype.indexOf() and String.prototype.lastIndexOf()?',
+        options: [
+          'They are the same',
+          'indexOf() returns first occurrence, lastIndexOf() returns last occurrence',
+          'indexOf() is for variables, lastIndexOf() is for functions',
+          'indexOf() is for numbers, lastIndexOf() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q42',
+        question: 'What is the difference between String.prototype.charCodeAt() and String.prototype.codePointAt()?',
+        options: [
+          'They are the same',
+          'charCodeAt() returns UTF-16 code unit, codePointAt() returns Unicode code point',
+          'charCodeAt() is for variables, codePointAt() is for functions',
+          'charCodeAt() is for numbers, codePointAt() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q43',
+        question: 'What is the difference between String.prototype.normalize() and String.prototype.localeCompare()?',
+        options: [
+          'They are the same',
+          'normalize() returns Unicode Normalization Form, localeCompare() compares strings',
+          'normalize() is for variables, localeCompare() is for functions',
+          'normalize() is for numbers, localeCompare() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q44',
+        question: 'What is the difference between String.prototype.toLocaleLowerCase() and String.prototype.toLocaleUpperCase()?',
+        options: [
+          'They are the same',
+          'toLocaleLowerCase() converts to lowercase, toLocaleUpperCase() converts to uppercase',
+          'toLocaleLowerCase() is for variables, toLocaleUpperCase() is for functions',
+          'toLocaleLowerCase() is for numbers, toLocaleUpperCase() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q45',
+        question: 'What is the difference between String.prototype.anchor() and String.prototype.link()?',
+        options: [
+          'They are the same',
+          'anchor() creates anchor element, link() creates link element',
+          'anchor() is for variables, link() is for functions',
+          'anchor() is for numbers, link() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q46',
+        question: 'What is the difference between String.prototype.big() and String.prototype.small()?',
+        options: [
+          'They are the same',
+          'big() creates big font, small() creates small font',
+          'big() is for variables, small() is for functions',
+          'big() is for numbers, small() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q47',
+        question: 'What is the difference between String.prototype.bold() and String.prototype.italics()?',
+        options: [
+          'They are the same',
+          'bold() creates bold text, italics() creates italic text',
+          'bold() is for variables, italics() is for functions',
+          'bold() is for numbers, italics() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q48',
+        question: 'What is the difference between String.prototype.fixed() and String.prototype.strike()?',
+        options: [
+          'They are the same',
+          'fixed() creates monospace font, strike() creates strikethrough text',
+          'fixed() is for variables, strike() is for functions',
+          'fixed() is for numbers, strike() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q49',
+        question: 'What is the difference between String.prototype.sub() and String.prototype.sup()?',
+        options: [
+          'They are the same',
+          'sub() creates subscript text, sup() creates superscript text',
+          'sub() is for variables, sup() is for functions',
+          'sub() is for numbers, sup() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      },
+      {
+        id: 'q50',
+        question: 'What is the difference between String.prototype.fontcolor() and String.prototype.fontsize()?',
+        options: [
+          'They are the same',
+          'fontcolor() sets color, fontsize() sets size',
+          'fontcolor() is for variables, fontsize() is for functions',
+          'fontcolor() is for numbers, fontsize() is for strings'
+        ],
+        correctAnswer: '1',
+        category: 'javascript',
+        difficulty: 'easy'
+      }
+    ]
+  }
+};

@@ -2,8 +2,15 @@
 
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
-import { cn } from '@/lib/utils';
+import { cn } from '../lib/utils';
 import Link from 'next/link';
+
+// Add type assertions for components
+const LinkComponent = Link as any;
+const CardComponent = Card as any;
+const CardHeaderComponent = CardHeader as any;
+const CardTitleComponent = CardTitle as any;
+const CardContentComponent = CardContent as any;
 
 interface LearningPath {
   id: string;
@@ -28,14 +35,14 @@ interface LearningPathCardProps {
 
 export function LearningPathCard({ path }: LearningPathCardProps) {
   return (
-    <Link href={`/learning/${path.id}`}>
+    <LinkComponent href={`/learning/${path.id}`}>
       <motion.div
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
-        <Card className="h-full hover:shadow-lg transition-shadow">
-          <CardHeader>
-            <CardTitle>{path.title}</CardTitle>
+        <CardComponent className="h-full hover:shadow-lg transition-shadow">
+          <CardHeaderComponent>
+            <CardTitleComponent>{path.title}</CardTitleComponent>
             <div className="flex items-center gap-2">
               <span className={cn(
                 'px-2 py-1 rounded-full text-xs font-medium',
@@ -48,15 +55,15 @@ export function LearningPathCard({ path }: LearningPathCardProps) {
                 {path.level}
               </span>
             </div>
-          </CardHeader>
-          <CardContent>
+          </CardHeaderComponent>
+          <CardContentComponent>
             <p className="text-muted-foreground mb-4">{path.description}</p>
             <div className="text-sm text-muted-foreground">
               {path.sets.length} sets • {path.sets.reduce((total, set) => total + set.cards.length, 0)} cards
             </div>
-          </CardContent>
-        </Card>
+          </CardContentComponent>
+        </CardComponent>
       </motion.div>
-    </Link>
+    </LinkComponent>
   );
 } 

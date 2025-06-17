@@ -1,13 +1,21 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import { learningPaths } from '@/lib/data/learningPaths';
+import { learningPaths } from '@/lib/data/learning-paths';
 import { FlashcardReview } from '@/components/FlashcardReview';
 import { Quiz } from '@/components/quiz/Quiz';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/Tabs';
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 import { useState } from 'react';
+
+// Add type assertions
+const TabsComponent = Tabs as any;
+const TabsListComponent = TabsList as any;
+const TabsTriggerComponent = TabsTrigger as any;
+const TabsContentComponent = TabsContent as any;
+const LinkComponent = Link as any;
+const ButtonComponent = Button as any;
 
 export default function LearningPathPage() {
   const params = useParams();
@@ -16,15 +24,14 @@ export default function LearningPathPage() {
   const [quizXP, setQuizXP] = useState<number | null>(null);
   const [showReward, setShowReward] = useState(false);
 
-  console.log('Learning path page rendered with path:', path);
 
   if (!path) {
     return (
       <div className="min-h-screen p-8 flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold mb-4">Learning path not found</h1>
-        <Link href="/">
-          <Button>Return Home</Button>
-        </Link>
+        <LinkComponent href="/">
+          <ButtonComponent variant="outline">← Back to Home</ButtonComponent>
+        </LinkComponent>
       </div>
     );
   }
@@ -33,19 +40,19 @@ export default function LearningPathPage() {
     <main className="min-h-screen p-8 bg-background">
       <div className="max-w-7xl mx-auto space-y-8">
         <div className="flex items-center gap-4">
-          <Link href="/">
-            <Button variant="outline">← Back to Home</Button>
-          </Link>
+          <LinkComponent href="/">
+            <ButtonComponent variant="outline">← Back to Home</ButtonComponent>
+          </LinkComponent>
           <h1 className="text-4xl font-bold">{path.title}</h1>
         </div>
 
-        <Tabs defaultValue="flashcards" className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="flashcards">Flashcards</TabsTrigger>
-            <TabsTrigger value="quiz">Quiz</TabsTrigger>
-          </TabsList>
+        <TabsComponent defaultValue="flashcards" className="w-full">
+          <TabsListComponent className="grid w-full grid-cols-2">
+            <TabsTriggerComponent value="flashcards">Flashcards</TabsTriggerComponent>
+            <TabsTriggerComponent value="quiz">Quiz</TabsTriggerComponent>
+          </TabsListComponent>
           
-          <TabsContent value="flashcards" className="space-y-4">
+          <TabsContentComponent value="flashcards" className="space-y-4">
             {path.sets.map(set => (
               <div key={set.id} className="p-4 border rounded-lg">
                 <h2 className="text-2xl font-semibold mb-4">{set.title}</h2>
@@ -53,16 +60,14 @@ export default function LearningPathPage() {
                   cards={set.cards}
                   title={set.title}
                   onReviewComplete={(results) => {
-                    console.log('Review completed:', results);
                     // TODO: Save progress to database
                   }}
                 />
               </div>
             ))}
-          </TabsContent>
+          </TabsContentComponent>
           
-          <TabsContent value="quiz" className="mt-6">
-            {console.log('Quiz tab content rendering with quiz:', path.quiz)}
+          <TabsContentComponent value="quiz" className="mt-6">
             {path.quiz && path.quiz.questions && path.quiz.questions.length > 0 ? (
               <>
                 {showReward && quizXP !== null && (
@@ -76,7 +81,6 @@ export default function LearningPathPage() {
                     const xp = Math.round(score); // 1 XP per percent
                     setQuizXP(xp);
                     setShowReward(true);
-                    console.log('Quiz completed with score:', score, 'XP awarded:', xp);
                   }}
                 />
               </>
@@ -85,8 +89,8 @@ export default function LearningPathPage() {
                 No quiz available for this learning path.
               </div>
             )}
-          </TabsContent>
-        </Tabs>
+          </TabsContentComponent>
+        </TabsComponent>
       </div>
     </main>
   );

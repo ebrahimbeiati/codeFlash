@@ -3,6 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import { ChevronLeft, ChevronRight, RotateCcw, Sparkles } from 'lucide-react';
 
+// Add type assertions for icons
+const ChevronLeftIcon = ChevronLeft as any;
+const ChevronRightIcon = ChevronRight as any;
+const RotateCcwIcon = RotateCcw as any;
+const SparklesIcon = Sparkles as any;
+
 interface FlashcardProps {
   front: string;
   back: string;
@@ -113,7 +119,7 @@ export function Flashcard({
               animate={{ scale: 1 }}
               className="flex items-center gap-1 text-amber-500"
             >
-              <Sparkles className="w-4 h-4" />
+              <SparklesIcon className="w-4 h-4" />
               <span className="text-sm font-medium">Learning Mode</span>
             </motion.div>
           </div>
@@ -216,7 +222,7 @@ export function Flashcard({
             disabled={isFirst || isAnimating}
             aria-label="Previous card"
           >
-            <ChevronLeft className="w-5 h-5 mr-2" />
+            <ChevronLeftIcon className="w-5 h-5 mr-2" />
             Previous
           </motion.button>
 
@@ -240,7 +246,7 @@ export function Flashcard({
             aria-label="Next card"
           >
             Next
-            <ChevronRight className="w-5 h-5 ml-2" />
+            <ChevronRightIcon className="w-5 h-5 ml-2" />
           </motion.button>
         </div>
 
@@ -258,7 +264,7 @@ export function Flashcard({
             disabled={isAnimating}
             aria-label="Reset card"
           >
-            <RotateCcw className="w-4 h-4 mr-2" />
+            <RotateCcwIcon className="w-4 h-4 mr-2" />
             Reset Card
           </motion.button>
         </div>
