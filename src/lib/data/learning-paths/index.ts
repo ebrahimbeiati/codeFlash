@@ -11,6 +11,7 @@ import { expressBasics } from './express-basics';
 import { mongodbBasics } from './mongodb-basics';
 import { sqlBasics } from './sql-basics';
 import { linuxCommands } from './linux-commands';
+import { algorithmsDataStructures } from './algorithms-data-structures';
 
 export const learningPaths: LearningPath[] = [
   introToDigital,
@@ -24,5 +25,6 @@ export const learningPaths: LearningPath[] = [
   expressBasics,
   mongodbBasics,
   sqlBasics,
-  linuxCommands
+  linuxCommands,
+  algorithmsDataStructures
 ]; 
