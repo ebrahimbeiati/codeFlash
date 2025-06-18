@@ -1,16 +1,109 @@
 import { LearningPath } from '@/types/learningPath';
-import { FlashcardSet } from '@/types/flashcard';
-import { Quiz } from '@/types/quiz';
 
 export const expressBasics: LearningPath = {
   id: 'express-basics',
-  title: 'Express.js',
-  description: 'Learn Express.js from basics to advanced concepts',
-  level: 'beginner',
-  category: 'backend',
-  createdAt: new Date(),
-  updatedAt: new Date(),
+  title: 'Express.js Basics',
+  description: 'Learn the fundamentals of Express.js web framework',
+  level: 'intermediate',
   sets: [
+    {
+      id: 'express-fundamentals',
+      title: 'Express Fundamentals',
+      description: 'Core concepts and setup of Express.js',
+      category: 'framework',
+      cards: [
+        {
+          id: 'ef-1',
+          front: 'What is Express.js?',
+          back: 'Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.',
+          category: 'framework',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'ef-2',
+          front: 'How do you install Express.js?',
+          back: 'You can install Express.js using npm: npm install express, or yarn: yarn add express.',
+          category: 'setup',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'ef-3',
+          front: 'What is the basic Express.js server setup?',
+          back: 'const express = require(\'express\'); const app = express(); app.listen(3000, () => { console.log(\'Server running on port 3000\'); });',
+          category: 'setup',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'ef-4',
+          front: 'What is middleware in Express.js?',
+          back: 'Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application\'s request-response cycle.',
+          category: 'concepts',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'ef-5',
+          front: 'How do you create a GET route in Express.js?',
+          back: 'app.get(\'/path\', (req, res) => { res.send(\'Hello World\'); });',
+          category: 'routing',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'ef-6',
+          front: 'How do you create a POST route in Express.js?',
+          back: 'app.post(\'/path\', (req, res) => { res.send(\'Data received\'); });',
+          category: 'routing',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'ef-7',
+          front: 'What is the purpose of app.use()?',
+          back: 'app.use() is used to mount middleware functions at a specified path. It\'s executed every time the app receives a request.',
+          category: 'middleware',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'ef-8',
+          front: 'How do you serve static files in Express.js?',
+          back: 'app.use(express.static(\'public\')); This serves files from the public directory.',
+          category: 'static-files',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'ef-9',
+          front: 'What is the purpose of express.json() middleware?',
+          back: 'express.json() is a built-in middleware that parses incoming requests with JSON payloads. It\'s based on body-parser.',
+          category: 'middleware',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        },
+        {
+          id: 'ef-10',
+          front: 'How do you handle URL parameters in Express.js?',
+          back: 'app.get(\'/users/:id\', (req, res) => { const userId = req.params.id; });',
+          category: 'routing',
+          difficulty: 'medium',
+          reviewCount: 0,
+          correctCount: 0
+        }
+      ]
+    },
     {
       id: 'express-beginner',
       title: 'Express Beginner',
@@ -187,7 +280,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of app.use()?',
           back: 'app.use() is used to mount middleware functions at a specified path, or to mount middleware for all routes if no path is specified.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -196,7 +289,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of express.Router()?',
           back: 'express.Router() is used to create a new router object, allowing you to modularize route handlers and create a mini-application.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -205,7 +298,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of res.render()?',
           back: 'res.render() is used to render a view template and send the rendered HTML string to the client, commonly used with template engines.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -214,7 +307,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of app.all()?',
           back: 'app.all() is used to handle all HTTP methods at a specified path, defining what happens when a client makes any type of request to that path.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -223,7 +316,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of app.param()?',
           back: 'app.param() is used to add callback triggers to route parameters, allowing you to perform operations on route parameters before they are passed to route handlers.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -232,7 +325,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of app.route()?',
           back: 'app.route() is used to create a chainable route handler for a path, allowing you to define multiple HTTP method handlers for the same path.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -241,7 +334,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of res.set()?',
           back: 'res.set() is used to set HTTP response headers, allowing you to customize the headers sent to the client.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -250,7 +343,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of res.cookie()?',
           back: 'res.cookie() is used to set a cookie in the response, allowing you to store data on the client\'s browser.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -259,7 +352,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of res.clearCookie()?',
           back: 'res.clearCookie() is used to clear a cookie in the response, removing it from the client\'s browser.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -268,7 +361,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of req.cookies?',
           back: 'req.cookies is an object containing the cookies sent by the request, populated by cookie-parser middleware.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -277,7 +370,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of req.headers?',
           back: 'req.headers is an object containing the HTTP headers sent by the request, allowing you to access request headers.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -286,7 +379,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of req.protocol?',
           back: 'req.protocol is a string containing the request protocol, allowing you to determine if the request is HTTP or HTTPS.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -295,7 +388,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of req.secure?',
           back: 'req.secure is a boolean that is true if the request is over HTTPS, allowing you to check if the request is secure.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -304,7 +397,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of req.ip?',
           back: 'req.ip is a string containing the remote IP address of the request, allowing you to access the client\'s IP address.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -313,7 +406,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of req.ips?',
           back: 'req.ips is an array of IP addresses in the X-Forwarded-For header, allowing you to access the client\'s IP addresses when behind a proxy.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -322,7 +415,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of req.subdomains?',
           back: 'req.subdomains is an array of subdomains in the domain name of the request, allowing you to access the subdomains.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         },
@@ -331,7 +424,7 @@ export const expressBasics: LearningPath = {
           front: 'What is the purpose of req.originalUrl?',
           back: 'req.originalUrl is a string containing the original request URL, allowing you to access the full URL of the request.',
           category: 'express',
-          difficulty: 'intermediate',
+          difficulty: 'medium',
           reviewCount: 0,
           correctCount: 0
         }
@@ -339,153 +432,97 @@ export const expressBasics: LearningPath = {
     },
     {
       id: 'express-advanced',
-      title: 'Express Advanced',
-      description: 'Advanced Express.js concepts and features',
-      category: 'express',
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      title: 'Advanced Express.js',
+      description: 'Advanced concepts and best practices',
+      category: 'advanced',
       cards: [
         {
-          id: 'express-a-1',
-          front: 'What is the purpose of req.accepts()?',
-          back: 'req.accepts() is a function that checks if the request accepts the specified content types, allowing you to check content negotiation.',
-          category: 'express',
-          difficulty: 'advanced',
+          id: 'ea-1',
+          front: 'What is express.Router()?',
+          back: 'express.Router() is used to create a new router object, allowing you to modularize route handlers and create a mini-application.',
+          category: 'routing',
+          difficulty: 'hard',
           reviewCount: 0,
           correctCount: 0
         },
         {
-          id: 'express-a-2',
-          front: 'What is the purpose of res.format()?',
-          back: 'res.format() is a function that performs content negotiation on the Accept HTTP header, allowing you to send different responses based on the client\'s accepted content types.',
-          category: 'express',
-          difficulty: 'advanced',
+          id: 'ea-2',
+          front: 'What is res.render()?',
+          back: 'res.render() is used to render a view template and send the rendered HTML string to the client, commonly used with template engines.',
+          category: 'views',
+          difficulty: 'hard',
           reviewCount: 0,
           correctCount: 0
         },
         {
-          id: 'express-a-3',
-          front: 'What is the purpose of req.range()?',
-          back: 'req.range() is a function that parses the Range header field, allowing you to handle range requests for partial content.',
-          category: 'express',
-          difficulty: 'advanced',
+          id: 'ea-3',
+          front: 'What is app.all()?',
+          back: 'app.all() is used to handle all HTTP methods at a specified path, defining what happens when a client makes any type of request to that path.',
+          category: 'routing',
+          difficulty: 'hard',
           reviewCount: 0,
           correctCount: 0
         },
         {
-          id: 'express-a-4',
-          front: 'What is the purpose of req.baseUrl?',
-          back: 'req.baseUrl is a string containing the base URL of the mounted application, allowing you to access the base URL.',
-          category: 'express',
-          difficulty: 'advanced',
+          id: 'ea-4',
+          front: 'What is app.param()?',
+          back: 'app.param() is used to add callback triggers to route parameters, allowing you to perform operations on route parameters before they are passed to route handlers.',
+          category: 'routing',
+          difficulty: 'hard',
           reviewCount: 0,
           correctCount: 0
         },
         {
-          id: 'express-a-5',
-          front: 'What is the purpose of req.hostname?',
-          back: 'req.hostname is a string containing the hostname from the Host HTTP header, allowing you to access the hostname.',
-          category: 'express',
-          difficulty: 'advanced',
+          id: 'ea-5',
+          front: 'What is app.route()?',
+          back: 'app.route() is used to create a chainable route handler for a path, allowing you to define multiple HTTP method handlers for the same path.',
+          category: 'routing',
+          difficulty: 'hard',
           reviewCount: 0,
           correctCount: 0
         },
         {
-          id: 'express-a-6',
-          front: 'What is the purpose of req.fresh?',
-          back: 'req.fresh is a boolean that is true if the request is fresh, meaning the response is still valid and can be served from cache.',
-          category: 'express',
-          difficulty: 'advanced',
+          id: 'ea-6',
+          front: 'What is res.set()?',
+          back: 'res.set() is used to set HTTP response headers, allowing you to customize the headers sent to the client.',
+          category: 'response',
+          difficulty: 'hard',
           reviewCount: 0,
           correctCount: 0
         },
         {
-          id: 'express-a-7',
-          front: 'What is the purpose of req.stale?',
-          back: 'req.stale is a boolean that is true if the request is stale, meaning the response is no longer valid and should be regenerated.',
-          category: 'express',
-          difficulty: 'advanced',
+          id: 'ea-7',
+          front: 'What is res.cookie()?',
+          back: 'res.cookie() is used to set a cookie in the response, allowing you to store data on the client\'s browser.',
+          category: 'cookies',
+          difficulty: 'hard',
           reviewCount: 0,
           correctCount: 0
         },
         {
-          id: 'express-a-8',
-          front: 'What is the purpose of req.xhr?',
-          back: 'req.xhr is a boolean that is true if the request is an XMLHttpRequest, allowing you to check if the request is an AJAX request.',
-          category: 'express',
-          difficulty: 'advanced',
+          id: 'ea-8',
+          front: 'What is res.clearCookie()?',
+          back: 'res.clearCookie() is used to clear a cookie in the response, removing it from the client\'s browser.',
+          category: 'cookies',
+          difficulty: 'hard',
           reviewCount: 0,
           correctCount: 0
         },
         {
-          id: 'express-a-9',
-          front: 'What is the purpose of req.acceptsCharsets()?',
-          back: 'req.acceptsCharsets() is a function that checks if the request accepts the specified character sets, allowing you to check character set negotiation.',
-          category: 'express',
-          difficulty: 'advanced',
+          id: 'ea-9',
+          front: 'What is req.cookies?',
+          back: 'req.cookies is an object containing the cookies sent by the request, populated by cookie-parser middleware.',
+          category: 'request',
+          difficulty: 'hard',
           reviewCount: 0,
           correctCount: 0
         },
         {
-          id: 'express-a-10',
-          front: 'What is the purpose of req.acceptsEncodings()?',
-          back: 'req.acceptsEncodings() is a function that checks if the request accepts the specified encodings, allowing you to check encoding negotiation.',
-          category: 'express',
-          difficulty: 'advanced',
-          reviewCount: 0,
-          correctCount: 0
-        },
-        {
-          id: 'express-a-11',
-          front: 'What is the purpose of req.acceptsLanguages()?',
-          back: 'req.acceptsLanguages() is a function that checks if the request accepts the specified languages, allowing you to check language negotiation.',
-          category: 'express',
-          difficulty: 'advanced',
-          reviewCount: 0,
-          correctCount: 0
-        },
-        {
-          id: 'express-a-12',
-          front: 'What is the purpose of req.is()?',
-          back: 'req.is() is a function that checks if the request is of the specified content type, allowing you to check the content type of the request.',
-          category: 'express',
-          difficulty: 'advanced',
-          reviewCount: 0,
-          correctCount: 0
-        },
-        {
-          id: 'express-a-13',
-          front: 'What is the purpose of res.append()?',
-          back: 'res.append() is a function that appends the specified value to the HTTP response header field, allowing you to add headers to the response.',
-          category: 'express',
-          difficulty: 'advanced',
-          reviewCount: 0,
-          correctCount: 0
-        },
-        {
-          id: 'express-a-14',
-          front: 'What is the purpose of res.attachment()?',
-          back: 'res.attachment() is a function that sets the Content-Disposition header field to attachment, allowing you to send files as attachments.',
-          category: 'express',
-          difficulty: 'advanced',
-          reviewCount: 0,
-          correctCount: 0
-        },
-        {
-          id: 'express-a-15',
-          front: 'What is the purpose of res.download()?',
-          back: 'res.download() is a function that transfers the file at the specified path as an attachment, allowing you to send files to the client.',
-          category: 'express',
-          difficulty: 'advanced',
-          reviewCount: 0,
-          correctCount: 0
-        },
-        {
-          id: 'express-a-16',
-          front: 'What is the purpose of res.end()?',
-          back: 'res.end() is a function that ends the response process, allowing you to end the response without sending any data.',
-          category: 'express',
-          difficulty: 'advanced',
+          id: 'ea-10',
+          front: 'What is req.headers?',
+          back: 'req.headers is an object containing the HTTP headers sent by the request, allowing you to access request headers.',
+          category: 'request',
+          difficulty: 'hard',
           reviewCount: 0,
           correctCount: 0
         }

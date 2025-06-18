@@ -2,22 +2,23 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Brain, Code, Sparkles, Laptop, GitBranch, Terminal, Database } from 'lucide-react';
+import { ArrowRight, BookOpen, Brain, Code, Sparkles, Laptop, Terminal, Database } from 'lucide-react';
 import { learningPaths } from '@/lib/data/learning-paths';
 import { ProgressTracker } from '@/components/ProgressTracker';
 import { getUserProgress } from '@/lib/utils/progress';
 import { useEffect, useState } from 'react';
+import type { ComponentType } from 'react';
 
-// Add type assertions for icons and components
-const LinkComponent = Link as any;
-const LaptopIcon = Laptop as any;
-const CodeIcon = Code as any;
-const TerminalIcon = Terminal as any;
-const SparklesIcon = Sparkles as any;
-const DatabaseIcon = Database as any;
-const BookOpenIcon = BookOpen as any;
-const ArrowRightIcon = ArrowRight as any;
-const BrainIcon = Brain as any;
+// Add type assertions for React 19 compatibility
+const LinkComponent = Link as ComponentType<any>;
+const LaptopIcon = Laptop as ComponentType<any>;
+const CodeIcon = Code as ComponentType<any>;
+const TerminalIcon = Terminal as ComponentType<any>;
+const SparklesIcon = Sparkles as ComponentType<any>;
+const DatabaseIcon = Database as ComponentType<any>;
+const BookOpenIcon = BookOpen as ComponentType<any>;
+const ArrowRightIcon = ArrowRight as ComponentType<any>;
+const BrainIcon = Brain as ComponentType<any>;
 
 const IconWrapper = ({ children, className }: { children: React.ReactNode; className?: string }) => (
   <div className={className}>{children}</div>

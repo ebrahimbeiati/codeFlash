@@ -1,4 +1,4 @@
 {
-  "/learning/[pathId]/page": "app/learning/[pathId]/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/learning/[pathId]/page": "app/learning/[pathId]/page.js"
 }

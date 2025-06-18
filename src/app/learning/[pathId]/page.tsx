@@ -10,14 +10,15 @@ import { ProgressTracker } from '@/components/ProgressTracker';
 import { getUserProgress, addXP, updateStreak } from '@/lib/utils/progress';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import type { ComponentType } from 'react';
 
-// Add type assertions
-const TabsComponent = Tabs as any;
-const TabsListComponent = TabsList as any;
-const TabsTriggerComponent = TabsTrigger as any;
-const TabsContentComponent = TabsContent as any;
-const LinkComponent = Link as any;
-const ButtonComponent = Button as any;
+// Add type assertions for React 19 compatibility
+const TabsComponent = Tabs as ComponentType<any>;
+const TabsListComponent = TabsList as ComponentType<any>;
+const TabsTriggerComponent = TabsTrigger as ComponentType<any>;
+const TabsContentComponent = TabsContent as ComponentType<any>;
+const LinkComponent = Link as ComponentType<any>;
+const ButtonComponent = Button as ComponentType<any>;
 
 export default function LearningPathPage() {
   const params = useParams();
@@ -81,7 +82,7 @@ export default function LearningPathPage() {
                     <FlashcardReview
                       cards={set.cards}
                       title={set.title}
-                      onReviewComplete={(results) => {
+                      onReviewComplete={() => {
                         // TODO: Save progress to database
                         // Update streak when user studies
                         const updatedProgress = updateStreak();
