@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
-import { cn } from '@/lib/utils';
 
 interface Question {
   id: string;
@@ -165,12 +164,11 @@ export function Quiz({ questions, onComplete }: QuizProps) {
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className={cn(
-                    'p-4 rounded-lg border shadow-sm',
+                  className={`p-4 rounded-lg border shadow-sm ${
                     answers[question.id] === question.correctAnswer
                       ? 'bg-gradient-to-br from-green-50 to-emerald-50 border-green-200'
                       : 'bg-gradient-to-br from-red-50 to-rose-50 border-red-200'
-                  )}
+                  }`}
                 >
                   <div className="font-medium mb-2 text-gray-800">
                     {index + 1}. {question.question}
@@ -179,14 +177,13 @@ export function Quiz({ questions, onComplete }: QuizProps) {
                     {question.options.map((option, optionIndex) => (
                       <div
                         key={optionIndex}
-                        className={cn(
-                          'p-3 rounded-lg flex items-center gap-2 transition-all duration-200',
+                        className={`p-3 rounded-lg flex items-center gap-2 transition-all duration-200 ${
                           optionIndex === question.correctAnswer
                             ? 'bg-gradient-to-r from-green-100 to-emerald-100'
                             : optionIndex === answers[question.id]
                             ? 'bg-gradient-to-r from-red-100 to-rose-100'
                             : 'bg-white hover:bg-gray-50'
-                        )}
+                        }`}
                       >
                         {optionIndex === question.correctAnswer && (
                           <span className="text-green-600 font-bold text-xl">✓</span>
@@ -208,13 +205,7 @@ export function Quiz({ questions, onComplete }: QuizProps) {
               className="flex justify-center"
             >
               <button
-                className={cn(
-                  'inline-flex items-center justify-center font-medium transition-all duration-200',
-                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
-                  'disabled:pointer-events-none disabled:opacity-50',
-                  'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700',
-                  'h-12 px-6 py-2 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5'
-                )}
+                className="inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 h-12 px-6 py-2 rounded-lg shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                 onClick={() => {
                   setCurrentIndex(0);
                   setSelectedAnswer(null);
@@ -262,16 +253,13 @@ export function Quiz({ questions, onComplete }: QuizProps) {
                     key={index}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className={cn(
-                      'inline-flex items-center justify-center font-medium transition-all duration-200',
-                      'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
-                      'disabled:pointer-events-none disabled:opacity-50',
-                      'border border-indigo-200 bg-white hover:bg-indigo-50 focus-visible:ring-indigo-500',
-                      'w-full justify-start text-left p-4 h-auto relative rounded-lg shadow-sm',
-                      selectedAnswer === index && 'bg-gradient-to-r from-indigo-100 to-purple-100 border-indigo-300',
-                      showFeedback && index === currentQuestion.correctAnswer && 'bg-gradient-to-r from-green-100 to-emerald-100 border-green-300',
-                      showFeedback && selectedAnswer === index && index !== currentQuestion.correctAnswer && 'bg-gradient-to-r from-red-100 to-rose-100 border-red-300'
-                    )}
+                    className={`inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-indigo-200 bg-white hover:bg-indigo-50 focus-visible:ring-indigo-500 w-full justify-start text-left p-4 h-auto relative rounded-lg shadow-sm ${
+                      selectedAnswer === index ? 'bg-gradient-to-r from-indigo-100 to-purple-100 border-indigo-300' : ''
+                    } ${
+                      showFeedback && index === currentQuestion.correctAnswer ? 'bg-gradient-to-r from-green-100 to-emerald-100 border-green-300' : ''
+                    } ${
+                      showFeedback && selectedAnswer === index && index !== currentQuestion.correctAnswer ? 'bg-gradient-to-r from-red-100 to-rose-100 border-red-300' : ''
+                    }`}
                     onClick={() => handleAnswer(index)}
                     disabled={showFeedback}
                   >
@@ -290,17 +278,11 @@ export function Quiz({ questions, onComplete }: QuizProps) {
             </motion.div>
           </AnimatePresence>
 
-          <div className="flex justify-between gap-4 p-4">
+          <div className="flex flex-col sm:flex-row justify-between gap-4 p-4">
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className={cn(
-                'inline-flex items-center justify-center font-medium transition-all duration-200',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
-                'disabled:pointer-events-none disabled:opacity-50',
-                'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 hover:from-gray-200 hover:to-gray-300',
-                'h-12 px-6 py-2 rounded-lg shadow-sm hover:shadow-md min-w-[140px]'
-              )}
+              className="inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-gray-100 to-gray-200 text-gray-800 hover:from-gray-200 hover:to-gray-300 h-10 sm:h-12 px-4 sm:px-6 py-2 rounded-lg shadow-sm hover:shadow-md text-sm sm:text-base w-full sm:w-auto"
               onClick={() => {
                 setCurrentIndex(prev => Math.max(prev - 1, 0));
                 setSelectedAnswer(answers[shuffledQuestions[Math.max(currentIndex - 1, 0)].id] ?? null);
@@ -313,13 +295,7 @@ export function Quiz({ questions, onComplete }: QuizProps) {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className={cn(
-                'inline-flex items-center justify-center font-medium transition-all duration-200',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
-                'disabled:pointer-events-none disabled:opacity-50',
-                'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700',
-                'h-12 px-6 py-2 rounded-lg shadow-sm hover:shadow-md min-w-[140px]'
-              )}
+              className="inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 h-10 sm:h-12 px-4 sm:px-6 py-2 rounded-lg shadow-sm hover:shadow-md text-sm sm:text-base w-full sm:w-auto"
               onClick={handleNext}
               disabled={!showFeedback}
             >

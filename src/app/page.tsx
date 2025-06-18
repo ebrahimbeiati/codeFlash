@@ -3,8 +3,10 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, BookOpen, Brain, Code, Sparkles, Laptop, GitBranch, Terminal, Database } from 'lucide-react';
-import type { LucideProps } from 'lucide-react';
 import { learningPaths } from '@/lib/data/learning-paths';
+import { ProgressTracker } from '@/components/ProgressTracker';
+import { getUserProgress } from '@/lib/utils/progress';
+import { useEffect, useState } from 'react';
 
 // Add type assertions for icons and components
 const LinkComponent = Link as any;
@@ -83,9 +85,31 @@ const getTextColorForPath = (id: string) => {
 };
 
 export default function Home() {
+  const [userProgress, setUserProgress] = useState(getUserProgress());
+
+  useEffect(() => {
+    // Update progress when component mounts
+    setUserProgress(getUserProgress());
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       <div className="container mx-auto px-4 py-16">
+        {/* Progress Tracker Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="mb-12"
+        >
+          <ProgressTracker 
+            streak={userProgress.streak}
+            xp={userProgress.xp}
+            level={userProgress.level}
+            className="max-w-md mx-auto"
+          />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

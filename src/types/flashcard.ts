@@ -16,6 +16,4 @@ export interface FlashcardSet {
   description: string;
   cards: Flashcard[];
   category: string;
-  createdAt: Date;
-  updatedAt: Date;
 } 
