@@ -64,8 +64,20 @@ export function FlashcardReview({
       })
     : cards;
 
-  const currentCardInFiltered = cardsToShow[currentIndex] || cardsToShow[0];
-  const isLastCardInFiltered = currentIndex === cardsToShow.length - 1;
+  // Ensure currentIndex is within bounds
+  const safeCurrentIndex = Math.min(currentIndex, cardsToShow.length - 1);
+  const currentCardInFiltered = cardsToShow[safeCurrentIndex] || cardsToShow[0];
+  const isLastCardInFiltered = safeCurrentIndex === cardsToShow.length - 1;
+
+  // Debug logging
+  console.log('FlashcardReview Debug:', {
+    cardsLength: cards.length,
+    cardsToShowLength: cardsToShow.length,
+    currentIndex,
+    safeCurrentIndex,
+    currentCardInFiltered: !!currentCardInFiltered,
+    reviewMode
+  });
 
   // Load saved progress when component mounts
   useEffect(() => {
@@ -141,6 +153,7 @@ export function FlashcardReview({
     setCurrentIndex(0); // Reset to first card when switching modes
   };
 
+  // All early returns moved here, after all hooks
   if (isLoading) {
     return (
       <CardComponent className={`w-full max-w-4xl mx-auto ${className || ''}`}>
@@ -148,6 +161,43 @@ export function FlashcardReview({
           <div className="flex items-center justify-center">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
             <span className="ml-2 text-sm text-muted-foreground">Loading progress...</span>
+          </div>
+        </CardContentComponent>
+      </CardComponent>
+    );
+  }
+
+  // If no cards to show in review mode, show a message
+  if (reviewMode && cardsToShow.length === 0) {
+    return (
+      <CardComponent className={`w-full max-w-4xl mx-auto ${className || ''}`}>
+        <CardContentComponent className="px-2 sm:px-6 py-8">
+          <div className="text-center">
+            <div className="text-2xl mb-4">🎉</div>
+            <h3 className="text-lg font-semibold mb-2">No cards to review!</h3>
+            <p className="text-muted-foreground mb-4">
+              All cards in this set are marked as "Known". Great job!
+            </p>
+            <ButtonComponent
+              variant="outline"
+              onClick={() => setReviewMode(false)}
+            >
+              Switch to All Cards
+            </ButtonComponent>
+          </div>
+        </CardContentComponent>
+      </CardComponent>
+    );
+  }
+
+  // Guard against undefined currentCardInFiltered
+  if (!currentCardInFiltered) {
+    return (
+      <CardComponent className={`w-full max-w-4xl mx-auto ${className || ''}`}>
+        <CardContentComponent className="px-2 sm:px-6 py-8">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
+            <span className="text-sm text-muted-foreground">Loading cards...</span>
           </div>
         </CardContentComponent>
       </CardComponent>
@@ -213,23 +263,31 @@ export function FlashcardReview({
       )}
       <CardContentComponent className="px-2 sm:px-6">
         <div className="space-y-4 sm:space-y-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Flashcard
-              front={currentCardInFiltered.front}
-              back={currentCardInFiltered.back}
-              onNext={handleNext}
-              onPrevious={handlePrevious}
-              isFirst={currentIndex === 0}
-              isLast={isLastCardInFiltered}
-              totalCards={cardsToShow.length}
-              currentIndex={currentIndex}
-            />
-          </motion.div>
+          {/* Additional safety check */}
+          {!currentCardInFiltered ? (
+            <div className="text-center py-8">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
+              <span className="text-sm text-muted-foreground">Loading card...</span>
+            </div>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Flashcard
+                front={currentCardInFiltered.front}
+                back={currentCardInFiltered.back}
+                onNext={handleNext}
+                onPrevious={handlePrevious}
+                isFirst={currentIndex === 0}
+                isLast={isLastCardInFiltered}
+                totalCards={cardsToShow.length}
+                currentIndex={currentIndex}
+              />
+            </motion.div>
+          )}
           
           <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 mt-4 sm:mt-8">
             <ButtonComponent

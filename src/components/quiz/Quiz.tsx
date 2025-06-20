@@ -170,7 +170,7 @@ export function Quiz({ questions, onComplete }: QuizProps) {
                       : 'bg-gradient-to-br from-red-50 to-rose-50 border-red-200'
                   }`}
                 >
-                  <div className="font-medium mb-2 text-gray-800">
+                  <div className="font-medium mb-2 text-gray-800 break-words">
                     {index + 1}. {question.question}
                   </div>
                   <div className="space-y-2">
