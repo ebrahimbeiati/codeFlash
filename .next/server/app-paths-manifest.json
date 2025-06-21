@@ -1,7 +1,6 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/api/learning-paths/route": "app/api/learning-paths/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/learning/[pathId]/page": "app/learning/[pathId]/page.js",
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js",
+  "/learning/[pathId]/page": "app/learning/[pathId]/page.js"
 }

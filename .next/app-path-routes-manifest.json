@@ -1,7 +1,0 @@
-{
-  "/_not-found/page": "/_not-found",
-  "/api/learning-paths/route": "/api/learning-paths",
-  "/favicon.ico/route": "/favicon.ico",
-  "/learning/[pathId]/page": "/learning/[pathId]",
-  "/page": "/"
-}

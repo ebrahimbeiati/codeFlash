@@ -1,46 +1,25 @@
 {
   "pages": {
-    "/_not-found/page": [
-      "static/chunks/webpack-df70cda71feca323.js",
-      "static/chunks/4bd1b696-e65713f528dfc046.js",
-      "static/chunks/684-ee1082cb830f83a3.js",
-      "static/chunks/main-app-02ce66c93c62e5f9.js",
-      "static/chunks/app/_not-found/page-c8335b631b2ba02c.js"
-    ],
     "/layout": [
-      "static/chunks/webpack-df70cda71feca323.js",
-      "static/chunks/4bd1b696-e65713f528dfc046.js",
-      "static/chunks/684-ee1082cb830f83a3.js",
-      "static/chunks/main-app-02ce66c93c62e5f9.js",
-      "static/css/5e1b8acde4411256.css",
-      "static/chunks/app/layout-42b4646a4d9172ad.js"
-    ],
-    "/api/learning-paths/route": [
-      "static/chunks/webpack-df70cda71feca323.js",
-      "static/chunks/4bd1b696-e65713f528dfc046.js",
-      "static/chunks/684-ee1082cb830f83a3.js",
-      "static/chunks/main-app-02ce66c93c62e5f9.js",
-      "static/chunks/app/api/learning-paths/route-f5a2689139c6fd50.js"
-    ],
-    "/learning/[pathId]/page": [
-      "static/chunks/webpack-df70cda71feca323.js",
-      "static/chunks/4bd1b696-e65713f528dfc046.js",
-      "static/chunks/684-ee1082cb830f83a3.js",
-      "static/chunks/main-app-02ce66c93c62e5f9.js",
-      "static/chunks/667-1da9eac553e95f01.js",
-      "static/chunks/891-ba8204dc6aba09f2.js",
-      "static/chunks/338-d42115ad3559ca34.js",
-      "static/chunks/app/learning/[pathId]/page-01fe14dd6d1ecd1a.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
     ],
     "/page": [
-      "static/chunks/webpack-df70cda71feca323.js",
-      "static/chunks/4bd1b696-e65713f528dfc046.js",
-      "static/chunks/684-ee1082cb830f83a3.js",
-      "static/chunks/main-app-02ce66c93c62e5f9.js",
-      "static/chunks/667-1da9eac553e95f01.js",
-      "static/chunks/112-0f54904b7c6c4fde.js",
-      "static/chunks/338-d42115ad3559ca34.js",
-      "static/chunks/app/page-72ccb94384cf6b41.js"
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
+    "/learning/[pathId]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/learning/[pathId]/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

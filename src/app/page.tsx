@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight, BookOpen, Brain, Code, Sparkles, Laptop, Terminal, Database, Zap, Target } from 'lucide-react';
 import { learningPaths } from '@/lib/data/learning-paths';
 import { useEffect, useState } from 'react';
-import { ModeToggle } from "@/components/ui/mode-toggle";
 import type { ComponentType } from 'react';
 
 // --- Type Assertions for React 19 ---
@@ -73,7 +72,7 @@ export default function Home() {
             </span>
           </LinkComponent>
           <div className="flex flex-1 items-center justify-end space-x-2">
-            <ModeToggle />
+            
           </div>
         </div>
       </header>
