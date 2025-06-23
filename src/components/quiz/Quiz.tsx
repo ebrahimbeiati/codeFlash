@@ -8,7 +8,7 @@ interface Question {
   id: string;
   question: string;
   options: string[];
-  correctAnswer: number;
+  correctAnswer: number | string;
 }
 
 interface QuizProps {
@@ -77,7 +77,12 @@ export function Quiz({ questions, onComplete }: QuizProps) {
       [currentQuestion.id]: index
     }));
 
-    if (index === currentQuestion.correctAnswer) {
+    // Convert correctAnswer to number if it's a string
+    const correctAnswerIndex = typeof currentQuestion.correctAnswer === 'string' 
+      ? parseInt(currentQuestion.correctAnswer) 
+      : currentQuestion.correctAnswer;
+
+    if (index === correctAnswerIndex) {
       setShowCelebration(true);
       triggerConfetti();
       setTimeout(() => setShowCelebration(false), 3000);
@@ -99,7 +104,14 @@ export function Quiz({ questions, onComplete }: QuizProps) {
     const correctAnswers = Object.entries(answers).filter(
       ([questionId, answerIndex]) => {
         const question = shuffledQuestions.find(q => q.id === questionId);
-        return question && question.correctAnswer === answerIndex;
+        if (!question) return false;
+        
+        // Convert correctAnswer to number if it's a string
+        const correctAnswerIndex = typeof question.correctAnswer === 'string' 
+          ? parseInt(question.correctAnswer) 
+          : question.correctAnswer;
+        
+        return correctAnswerIndex === answerIndex;
       }
     ).length;
     return (correctAnswers / shuffledQuestions.length) * 100;
@@ -165,7 +177,12 @@ export function Quiz({ questions, onComplete }: QuizProps) {
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
                   className={`p-4 rounded-lg border shadow-sm ${
-                    answers[question.id] === question.correctAnswer
+                    (() => {
+                      const correctAnswerIndex = typeof question.correctAnswer === 'string' 
+                        ? parseInt(question.correctAnswer) 
+                        : question.correctAnswer;
+                      return answers[question.id] === correctAnswerIndex;
+                    })()
                       ? 'bg-gradient-to-br from-green-50 to-emerald-50 border-green-200'
                       : 'bg-gradient-to-br from-red-50 to-rose-50 border-red-200'
                   }`}
@@ -178,17 +195,32 @@ export function Quiz({ questions, onComplete }: QuizProps) {
                       <div
                         key={optionIndex}
                         className={`p-3 rounded-lg flex items-center gap-2 transition-all duration-200 ${
-                          optionIndex === question.correctAnswer
+                          (() => {
+                            const correctAnswerIndex = typeof question.correctAnswer === 'string' 
+                              ? parseInt(question.correctAnswer) 
+                              : question.correctAnswer;
+                            return optionIndex === correctAnswerIndex;
+                          })()
                             ? 'bg-gradient-to-r from-green-100 to-emerald-100'
                             : optionIndex === answers[question.id]
                             ? 'bg-gradient-to-r from-red-100 to-rose-100'
                             : 'bg-white hover:bg-gray-50'
                         }`}
                       >
-                        {optionIndex === question.correctAnswer && (
+                        {(() => {
+                          const correctAnswerIndex = typeof question.correctAnswer === 'string' 
+                            ? parseInt(question.correctAnswer) 
+                            : question.correctAnswer;
+                          return optionIndex === correctAnswerIndex;
+                        })() && (
                           <span className="text-green-600 font-bold text-xl">✓</span>
                         )}
-                        {optionIndex === answers[question.id] && optionIndex !== question.correctAnswer && (
+                        {optionIndex === answers[question.id] && (() => {
+                          const correctAnswerIndex = typeof question.correctAnswer === 'string' 
+                            ? parseInt(question.correctAnswer) 
+                            : question.correctAnswer;
+                          return optionIndex !== correctAnswerIndex;
+                        })() && (
                           <span className="text-red-600 font-bold text-xl">✗</span>
                         )}
                         <span className="text-gray-700">{option}</span>
@@ -256,18 +288,38 @@ export function Quiz({ questions, onComplete }: QuizProps) {
                     className={`inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-indigo-200 bg-white hover:bg-indigo-50 focus-visible:ring-indigo-500 w-full justify-start text-left p-4 h-auto relative rounded-lg shadow-sm ${
                       selectedAnswer === index ? 'bg-gradient-to-r from-indigo-100 to-purple-100 border-indigo-300' : ''
                     } ${
-                      showFeedback && index === currentQuestion.correctAnswer ? 'bg-gradient-to-r from-green-100 to-emerald-100 border-green-300' : ''
+                      (() => {
+                        const correctAnswerIndex = typeof currentQuestion.correctAnswer === 'string' 
+                          ? parseInt(currentQuestion.correctAnswer) 
+                          : currentQuestion.correctAnswer;
+                        return showFeedback && index === correctAnswerIndex;
+                      })() ? 'bg-gradient-to-r from-green-100 to-emerald-100 border-green-300' : ''
                     } ${
-                      showFeedback && selectedAnswer === index && index !== currentQuestion.correctAnswer ? 'bg-gradient-to-r from-red-100 to-rose-100 border-red-300' : ''
+                      showFeedback && selectedAnswer === index && (() => {
+                        const correctAnswerIndex = typeof currentQuestion.correctAnswer === 'string' 
+                          ? parseInt(currentQuestion.correctAnswer) 
+                          : currentQuestion.correctAnswer;
+                        return index !== correctAnswerIndex;
+                      })() ? 'bg-gradient-to-r from-red-100 to-rose-100 border-red-300' : ''
                     }`}
                     onClick={() => handleAnswer(index)}
                     disabled={showFeedback}
                   >
                     <div className="flex items-center gap-3">
-                      {showFeedback && index === currentQuestion.correctAnswer && (
+                      {(() => {
+                        const correctAnswerIndex = typeof currentQuestion.correctAnswer === 'string' 
+                          ? parseInt(currentQuestion.correctAnswer) 
+                          : currentQuestion.correctAnswer;
+                        return showFeedback && index === correctAnswerIndex;
+                      })() && (
                         <span className="text-green-600 font-bold text-xl">✓</span>
                       )}
-                      {showFeedback && selectedAnswer === index && index !== currentQuestion.correctAnswer && (
+                      {showFeedback && selectedAnswer === index && (() => {
+                        const correctAnswerIndex = typeof currentQuestion.correctAnswer === 'string' 
+                          ? parseInt(currentQuestion.correctAnswer) 
+                          : currentQuestion.correctAnswer;
+                        return index !== correctAnswerIndex;
+                      })() && (
                         <span className="text-red-600 font-bold text-xl">✗</span>
                       )}
                       <span className="text-gray-700">{option}</span>
