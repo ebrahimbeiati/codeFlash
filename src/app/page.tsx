@@ -3,9 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, BookOpen, Brain, Code, Sparkles, Laptop, Terminal, Database, Zap, Target } from 'lucide-react';
-import { learningPaths } from '@/lib/data/learning-paths';
 import { useEffect, useState } from 'react';
-import type { ComponentType } from 'react';
 
 // --- Type Assertions for React 19 ---
 const LinkComponent = Link as any;
@@ -19,6 +17,14 @@ const BookOpenIcon = BookOpen as any;
 const ArrowRightIcon = ArrowRight as any;
 const BrainIcon = Brain as any;
 const ZapIcon = Zap as any;
+
+interface LearningPath {
+  id: string;
+  title: string;
+  description: string;
+  level: string;
+  category: string;
+}
 
 // --- Helper Functions for Dynamic Styling ---
 const getIconForPath = (id: string) => {
@@ -61,6 +67,57 @@ const getTextColorForPath = (id: string) => {
 };
 
 export default function Home() {
+  const [learningPaths, setLearningPaths] = useState<LearningPath[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchLearningPaths = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('/api/learning-paths');
+        
+        if (!response.ok) {
+          throw new Error('Failed to load learning paths');
+        }
+        
+        const data = await response.json();
+        setLearningPaths(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to load learning paths');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLearningPaths();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+        <span className="ml-2 text-sm text-muted-foreground">Loading learning paths...</span>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-background text-foreground flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Error: {error}</h1>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg"
+          >
+            Try Again
+          </button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -101,6 +158,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ scale: 1.02 }}
               className="group"
+              data-testid="learning-path-card"
             >
               <LinkComponent href={`/learning/${path.id}`} className="block h-full">
                 <div className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border h-full flex flex-col">

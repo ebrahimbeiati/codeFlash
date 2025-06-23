@@ -1,0 +1,894 @@
+{
+  "id": "typescript-essentials",
+  "title": "TypeScript",
+  "description": "Learn TypeScript from basics to advanced concepts",
+  "level": "beginner",
+  "category": "programming",
+  "createdAt": "2025-06-23T18:03:13.526Z",
+  "updatedAt": "2025-06-23T18:03:13.526Z",
+  "sets": [
+    {
+      "id": "typescript-beginner",
+      "title": "TypeScript Beginner",
+      "description": "Basic TypeScript concepts and features",
+      "category": "typescript",
+      "createdAt": "2025-06-23T18:03:13.526Z",
+      "updatedAt": "2025-06-23T18:03:13.526Z",
+      "cards": [
+        {
+          "id": "typescript-b-1",
+          "front": "What is TypeScript?",
+          "back": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript, adding static type definitions.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-2",
+          "front": "What is type annotation?",
+          "back": "Type annotation is a way to explicitly declare the type of a variable, parameter, or function return value.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-3",
+          "front": "What is an interface?",
+          "back": "An interface is a TypeScript feature that defines a contract for object structure, specifying required properties and their types.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-4",
+          "front": "What is a type alias?",
+          "back": "A type alias is a way to create a new name for a type, making it easier to reuse complex types.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-5",
+          "front": "What is the purpose of the any type?",
+          "back": "The any type allows a variable to hold any type of value, effectively opting out of type checking.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-6",
+          "front": "What is the purpose of the unknown type?",
+          "back": "The unknown type is a type-safe alternative to any, requiring type checking before operations.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-7",
+          "front": "What is the purpose of the void type?",
+          "back": "The void type represents the absence of any type, commonly used for functions that don't return a value.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-8",
+          "front": "What is the purpose of the never type?",
+          "back": "The never type represents values that never occur, used for functions that always throw or never return.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-9",
+          "front": "What is the purpose of the null type?",
+          "back": "The null type represents the intentional absence of any object value.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-10",
+          "front": "What is the purpose of the undefined type?",
+          "back": "The undefined type represents a variable that has been declared but not assigned a value.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-11",
+          "front": "What is the purpose of the boolean type?",
+          "back": "The boolean type represents a logical entity with true or false values.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-12",
+          "front": "What is the purpose of the number type?",
+          "back": "The number type represents both integer and floating-point numbers.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-13",
+          "front": "What is the purpose of the string type?",
+          "back": "The string type represents a sequence of characters.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-14",
+          "front": "What is the purpose of the symbol type?",
+          "back": "The symbol type represents a unique identifier, used as object property keys.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-15",
+          "front": "What is the purpose of the bigint type?",
+          "back": "The bigint type represents integers of arbitrary precision.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-16",
+          "front": "What is the purpose of the object type?",
+          "back": "The object type represents any non-primitive type.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-b-17",
+          "front": "What is the purpose of the array type?",
+          "back": "The array type represents an array of elements of a specific type.",
+          "category": "typescript",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        }
+      ]
+    },
+    {
+      "id": "typescript-intermediate",
+      "title": "TypeScript Intermediate",
+      "description": "Intermediate TypeScript concepts and features",
+      "category": "typescript",
+      "createdAt": "2025-06-23T18:03:13.526Z",
+      "updatedAt": "2025-06-23T18:03:13.526Z",
+      "cards": [
+        {
+          "id": "typescript-i-1",
+          "front": "What is a generic type?",
+          "back": "A generic type is a type that can work with different types, providing type safety while maintaining flexibility.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-2",
+          "front": "What is a union type?",
+          "back": "A union type is a type formed from two or more other types, representing values that may be any one of those types.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-3",
+          "front": "What is an intersection type?",
+          "back": "An intersection type combines multiple types into one, requiring an object to have all properties of each type.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-4",
+          "front": "What is a type guard?",
+          "back": "A type guard is a function that performs a runtime check to narrow down the type of a variable.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-5",
+          "front": "What is a literal type?",
+          "back": "A literal type is a type that represents a specific value, such as a specific string or number.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-6",
+          "front": "What is a tuple type?",
+          "back": "A tuple type is an array type with a fixed number of elements of specific types.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-7",
+          "front": "What is an enum?",
+          "back": "An enum is a way to define a set of named constants, making code more readable and maintainable.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-8",
+          "front": "What is a namespace?",
+          "back": "A namespace is a way to organize code into logical groups and prevent naming conflicts.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-9",
+          "front": "What is a module?",
+          "back": "A module is a way to organize code into separate files, with its own scope and exports.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-10",
+          "front": "What is a decorator?",
+          "back": "A decorator is a special kind of declaration that can be attached to a class, method, or property.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-11",
+          "front": "What is a mixin?",
+          "back": "A mixin is a way to reuse code across multiple classes, allowing for multiple inheritance.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-12",
+          "front": "What is a mapped type?",
+          "back": "A mapped type is a way to create a new type by transforming properties of an existing type.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-13",
+          "front": "What is a conditional type?",
+          "back": "A conditional type is a type that depends on a condition, similar to a ternary operator for types.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-14",
+          "front": "What is an indexed access type?",
+          "back": "An indexed access type is a way to access the type of a property using an index type.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-15",
+          "front": "What is a keyof type operator?",
+          "back": "The keyof type operator creates a union type of all property names of a given type.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-16",
+          "front": "What is a typeof type operator?",
+          "back": "The typeof type operator creates a type from the type of a value.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-i-17",
+          "front": "What is an instanceof type guard?",
+          "back": "An instanceof type guard checks if an object is an instance of a specific class.",
+          "category": "typescript",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        }
+      ]
+    },
+    {
+      "id": "typescript-advanced",
+      "title": "TypeScript Advanced",
+      "description": "Advanced TypeScript concepts and features",
+      "category": "typescript",
+      "createdAt": "2025-06-23T18:03:13.526Z",
+      "updatedAt": "2025-06-23T18:03:13.526Z",
+      "cards": [
+        {
+          "id": "typescript-a-1",
+          "front": "What is a utility type?",
+          "back": "A utility type is a built-in type that helps with common type transformations.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-2",
+          "front": "What is the purpose of Partial<T>?",
+          "back": "Partial<T> makes all properties of type T optional.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-3",
+          "front": "What is the purpose of Required<T>?",
+          "back": "Required<T> makes all properties of type T required.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-4",
+          "front": "What is the purpose of Readonly<T>?",
+          "back": "Readonly<T> makes all properties of type T read-only.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-5",
+          "front": "What is the purpose of Pick<T, K>?",
+          "back": "Pick<T, K> creates a type with a subset of properties K from type T.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-6",
+          "front": "What is the purpose of Omit<T, K>?",
+          "back": "Omit<T, K> creates a type with all properties of T except those in K.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-7",
+          "front": "What is the purpose of Exclude<T, U>?",
+          "back": "Exclude<T, U> creates a type by excluding from T all types that are assignable to U.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-8",
+          "front": "What is the purpose of Extract<T, U>?",
+          "back": "Extract<T, U> creates a type by extracting from T all types that are assignable to U.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-9",
+          "front": "What is the purpose of NonNullable<T>?",
+          "back": "NonNullable<T> creates a type by excluding null and undefined from T.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-10",
+          "front": "What is the purpose of ReturnType<T>?",
+          "back": "ReturnType<T> creates a type from the return type of function type T.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-11",
+          "front": "What is the purpose of InstanceType<T>?",
+          "back": "InstanceType<T> creates a type from the instance type of a constructor function type T.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-12",
+          "front": "What is the purpose of ThisType<T>?",
+          "back": "ThisType<T> marks the type of this in a function or object literal.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-13",
+          "front": "What is the purpose of Parameters<T>?",
+          "back": "Parameters<T> creates a tuple type from the parameter types of function type T.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-14",
+          "front": "What is the purpose of ConstructorParameters<T>?",
+          "back": "ConstructorParameters<T> creates a tuple type from the parameter types of a constructor function type T.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-15",
+          "front": "What is the purpose of ThisParameterType<T>?",
+          "back": "ThisParameterType<T> extracts the type of the this parameter of function type T.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "typescript-a-16",
+          "front": "What is the purpose of OmitThisParameter<T>?",
+          "back": "OmitThisParameter<T> creates a type from function type T with the this parameter removed.",
+          "category": "typescript",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "typescript-quiz",
+      "title": "TypeScript Quiz",
+      "description": "Test your knowledge of TypeScript concepts",
+      "category": "typescript",
+      "passingScore": 70,
+      "createdAt": "2025-06-23T18:03:13.526Z",
+      "updatedAt": "2025-06-23T18:03:13.526Z",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "What is TypeScript?",
+          "options": [
+            "A programming language",
+            "A typed superset of JavaScript",
+            "A database",
+            "A web framework"
+          ],
+          "correctAnswer": 1,
+          "category": "typescript",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q2",
+          "question": "What is type annotation?",
+          "options": [
+            "A way to add comments to code",
+            "A way to declare variable types",
+            "A way to format code",
+            "A way to debug code"
+          ],
+          "correctAnswer": 1,
+          "category": "typescript",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q3",
+          "question": "What is an interface?",
+          "options": [
+            "A way to add comments to code",
+            "A way to format code",
+            "A contract for object structure",
+            "A way to debug code"
+          ],
+          "correctAnswer": 2,
+          "category": "typescript",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q4",
+          "question": "What is a type alias?",
+          "options": [
+            "A way to add comments to code",
+            "A way to format code",
+            "A way to debug code",
+            "A new name for a type"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q5",
+          "question": "What is the purpose of the any type?",
+          "options": [
+            "To make code more readable",
+            "To make code more maintainable",
+            "To opt out of type checking",
+            "To make code more performant"
+          ],
+          "correctAnswer": 2,
+          "category": "typescript",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q6",
+          "question": "What is the purpose of the unknown type?",
+          "options": [
+            "To make code more readable",
+            "To make code more maintainable",
+            "To make code more performant",
+            "A type-safe alternative to any"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q7",
+          "question": "What is the purpose of the void type?",
+          "options": [
+            "To represent any type",
+            "To represent no type",
+            "To represent a function return type",
+            "To represent a variable type"
+          ],
+          "correctAnswer": 2,
+          "category": "typescript",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q8",
+          "question": "What is the purpose of the never type?",
+          "options": [
+            "To represent any type",
+            "To represent no type",
+            "To represent values that never occur",
+            "To represent a variable type"
+          ],
+          "correctAnswer": 2,
+          "category": "typescript",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q9",
+          "question": "What is the purpose of the null type?",
+          "options": [
+            "To represent any type",
+            "To represent no type",
+            "To represent a function return type",
+            "To represent the absence of a value"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q10",
+          "question": "What is the purpose of the undefined type?",
+          "options": [
+            "To represent any type",
+            "To represent no type",
+            "To represent a function return type",
+            "To represent an unassigned variable"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q11",
+          "question": "What is a generic type?",
+          "options": [
+            "A type that can only be used once",
+            "A type that can work with different types",
+            "A type that can only be used with classes",
+            "A type that can only be used with functions"
+          ],
+          "correctAnswer": 1,
+          "category": "typescript",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q12",
+          "question": "What is a union type?",
+          "options": [
+            "A type that can only be used once",
+            "A type that can only be used with classes",
+            "A type that can only be used with functions",
+            "A type formed from multiple types"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q13",
+          "question": "What is an intersection type?",
+          "options": [
+            "A type that can only be used once",
+            "A type that can only be used with classes",
+            "A type that combines multiple types",
+            "A type that can only be used with functions"
+          ],
+          "correctAnswer": 2,
+          "category": "typescript",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q14",
+          "question": "What is a type guard?",
+          "options": [
+            "A way to add comments to code",
+            "A way to format code",
+            "A way to debug code",
+            "A function that narrows down types"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q15",
+          "question": "What is a literal type?",
+          "options": [
+            "A type that can only be used once",
+            "A type that can only be used with classes",
+            "A type that represents a specific value",
+            "A type that can only be used with functions"
+          ],
+          "correctAnswer": 2,
+          "category": "typescript",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q16",
+          "question": "What is a tuple type?",
+          "options": [
+            "A type that can only be used once",
+            "A type that can only be used with classes",
+            "A type that can only be used with functions",
+            "An array with fixed element types"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q17",
+          "question": "What is an enum?",
+          "options": [
+            "A type that can only be used once",
+            "A type that can only be used with classes",
+            "A set of named constants",
+            "A type that can only be used with functions"
+          ],
+          "correctAnswer": 2,
+          "category": "typescript",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q18",
+          "question": "What is a namespace?",
+          "options": [
+            "A type that can only be used once",
+            "A way to organize code",
+            "A type that can only be used with classes",
+            "A type that can only be used with functions"
+          ],
+          "correctAnswer": 1,
+          "category": "typescript",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q19",
+          "question": "What is a module?",
+          "options": [
+            "A type that can only be used once",
+            "A type that can only be used with classes",
+            "A type that can only be used with functions",
+            "A way to organize code into files"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q20",
+          "question": "What is a decorator?",
+          "options": [
+            "A type that can only be used once",
+            "A type that can only be used with classes",
+            "A special kind of declaration",
+            "A type that can only be used with functions"
+          ],
+          "correctAnswer": 2,
+          "category": "typescript",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q21",
+          "question": "What is a utility type?",
+          "options": [
+            "A type that can only be used once",
+            "A type that can only be used with classes",
+            "A type that can only be used with functions",
+            "A built-in type for transformations"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q22",
+          "question": "What is the purpose of Partial<T>?",
+          "options": [
+            "To make all properties required",
+            "To make all properties optional",
+            "To make all properties read-only",
+            "To make all properties nullable"
+          ],
+          "correctAnswer": 1,
+          "category": "typescript",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q23",
+          "question": "What is the purpose of Required<T>?",
+          "options": [
+            "To make all properties optional",
+            "To make all properties required",
+            "To make all properties read-only",
+            "To make all properties nullable"
+          ],
+          "correctAnswer": 1,
+          "category": "typescript",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q24",
+          "question": "What is the purpose of Readonly<T>?",
+          "options": [
+            "To make all properties optional",
+            "To make all properties required",
+            "To make all properties read-only",
+            "To make all properties nullable"
+          ],
+          "correctAnswer": 2,
+          "category": "typescript",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q25",
+          "question": "What is the purpose of Pick<T, K>?",
+          "options": [
+            "To make all properties optional",
+            "To make all properties required",
+            "To make all properties read-only",
+            "To create a type with subset of properties"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q26",
+          "question": "What is the purpose of Omit<T, K>?",
+          "options": [
+            "To make all properties optional",
+            "To make all properties required",
+            "To make all properties read-only",
+            "To create a type excluding properties"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q27",
+          "question": "What is the purpose of Exclude<T, U>?",
+          "options": [
+            "To make all properties optional",
+            "To make all properties required",
+            "To make all properties read-only",
+            "To exclude types from a union"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q28",
+          "question": "What is the purpose of Extract<T, U>?",
+          "options": [
+            "To make all properties optional",
+            "To make all properties required",
+            "To make all properties read-only",
+            "To extract types from a union"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q29",
+          "question": "What is the purpose of NonNullable<T>?",
+          "options": [
+            "To make all properties optional",
+            "To make all properties required",
+            "To make all properties read-only",
+            "To exclude null and undefined"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q30",
+          "question": "What is the purpose of ReturnType<T>?",
+          "options": [
+            "To make all properties optional",
+            "To make all properties required",
+            "To make all properties read-only",
+            "To get function return type"
+          ],
+          "correctAnswer": 3,
+          "category": "typescript",
+          "difficulty": "hard"
+        }
+      ]
+    }
+  ]
+}

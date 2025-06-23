@@ -1,0 +1,635 @@
+{
+  "id": "intro-to-programming",
+  "title": "Introduction to Programming",
+  "description": "Master the fundamentals of programming, algorithms, and computational thinking",
+  "level": "beginner",
+  "difficulty": "beginner",
+  "estimatedTime": "5-7 hours",
+  "topics": ["Programming Basics", "Algorithms", "Data Types", "Control Structures", "Functions", "Problem Solving"],
+  "sets": [
+    {
+      "id": "programming-fundamentals",
+      "title": "Programming Fundamentals",
+      "description": "Core concepts and principles of programming",
+      "cards": [
+        {
+          "id": "pf-1",
+          "front": "What is programming?",
+          "back": "Programming is the process of creating instructions for computers to follow, telling them how to perform specific tasks and solve problems using programming languages."
+        },
+        {
+          "id": "pf-2",
+          "front": "What is a programming language?",
+          "back": "A programming language is a formal language with specific syntax and rules used to write instructions that computers can understand and execute, like Python, JavaScript, or Java."
+        },
+        {
+          "id": "pf-3",
+          "front": "What is an algorithm?",
+          "back": "An algorithm is a step-by-step procedure or set of rules used to solve a problem or accomplish a task. It's like a recipe for solving problems."
+        },
+        {
+          "id": "pf-4",
+          "front": "What is pseudocode?",
+          "back": "Pseudocode is a simplified, informal description of a programming algorithm that uses structural conventions of programming languages but is intended for human reading."
+        },
+        {
+          "id": "pf-5",
+          "front": "What is a variable?",
+          "back": "A variable is a named container that stores data values in a program. It can hold different types of information like numbers, text, or true/false values."
+        },
+        {
+          "id": "pf-6",
+          "front": "What is a constant?",
+          "back": "A constant is a variable whose value cannot be changed once it is assigned. It remains the same throughout the program execution."
+        },
+        {
+          "id": "pf-7",
+          "front": "What is a data type?",
+          "back": "A data type defines the kind of data a variable can hold, such as integers, floating-point numbers, strings, booleans, or more complex types."
+        },
+        {
+          "id": "pf-8",
+          "front": "What is a function?",
+          "back": "A function is a reusable block of code that performs a specific task. It can take inputs (parameters) and return outputs, promoting code reusability."
+        },
+        {
+          "id": "pf-9",
+          "front": "What is a parameter?",
+          "back": "A parameter is a variable in a function definition that receives a value when the function is called. It allows functions to work with different data."
+        },
+        {
+          "id": "pf-10",
+          "front": "What is a return value?",
+          "back": "A return value is the output that a function sends back to the code that called it. It's the result of the function's computation."
+        }
+      ]
+    },
+    {
+      "id": "data-types",
+      "title": "Data Types & Variables",
+      "description": "Understanding different types of data and how to work with them",
+      "cards": [
+        {
+          "id": "dt-1",
+          "front": "What is an integer?",
+          "back": "An integer is a whole number without decimal points, such as 1, 0, -5, or 1000. It can be positive, negative, or zero."
+        },
+        {
+          "id": "dt-2",
+          "front": "What is a floating-point number?",
+          "back": "A floating-point number is a number with decimal points, such as 3.14, -0.5, or 2.0. It can represent fractional values."
+        },
+        {
+          "id": "dt-3",
+          "front": "What is a string?",
+          "back": "A string is a sequence of characters enclosed in quotes, such as 'Hello World' or '123'. It can contain letters, numbers, and symbols."
+        },
+        {
+          "id": "dt-4",
+          "front": "What is a boolean?",
+          "back": "A boolean is a data type that can have only two values: true or false. It's used for logical operations and decision-making."
+        },
+        {
+          "id": "dt-5",
+          "front": "What is an array?",
+          "back": "An array is a collection of elements stored in a single variable, accessible by their index position. It can hold multiple values of the same type."
+        },
+        {
+          "id": "dt-6",
+          "front": "What is type conversion?",
+          "back": "Type conversion (casting) is the process of converting a value from one data type to another, such as converting a string '123' to an integer 123."
+        },
+        {
+          "id": "dt-7",
+          "front": "What is a null value?",
+          "back": "A null value represents the absence of a value or an empty state. It indicates that a variable has no meaningful value assigned."
+        },
+        {
+          "id": "dt-8",
+          "front": "What is an object?",
+          "back": "An object is a complex data type that can hold multiple values as properties, each with a name and value. It represents real-world entities."
+        },
+        {
+          "id": "dt-9",
+          "front": "What is scope?",
+          "back": "Scope defines where a variable can be accessed in a program. Variables have different scopes: global (accessible everywhere) or local (accessible only in specific areas)."
+        },
+        {
+          "id": "dt-10",
+          "front": "What is initialization?",
+          "back": "Initialization is the process of assigning an initial value to a variable when it is first created or declared."
+        }
+      ]
+    },
+    {
+      "id": "control-structures",
+      "title": "Control Structures",
+      "description": "Understanding how to control program flow and make decisions",
+      "cards": [
+        {
+          "id": "cs-1",
+          "front": "What is a conditional statement?",
+          "back": "A conditional statement (if/else) allows a program to make decisions and execute different code based on whether a condition is true or false."
+        },
+        {
+          "id": "cs-2",
+          "front": "What is an if statement?",
+          "back": "An if statement executes a block of code only if a specified condition is true. It's the most basic form of conditional execution."
+        },
+        {
+          "id": "cs-3",
+          "front": "What is an else statement?",
+          "back": "An else statement provides an alternative block of code to execute when the condition in an if statement is false."
+        },
+        {
+          "id": "cs-4",
+          "front": "What is an else if statement?",
+          "back": "An else if statement allows checking multiple conditions in sequence, providing different code blocks for each condition."
+        },
+        {
+          "id": "cs-5",
+          "front": "What is a switch statement?",
+          "back": "A switch statement is a control structure that allows executing different code blocks based on the value of a variable or expression."
+        },
+        {
+          "id": "cs-6",
+          "front": "What is a loop?",
+          "back": "A loop is a programming construct that repeats a block of code multiple times until a certain condition is met."
+        },
+        {
+          "id": "cs-7",
+          "front": "What is a for loop?",
+          "back": "A for loop repeats a block of code a specific number of times, typically using a counter variable to control the iteration."
+        },
+        {
+          "id": "cs-8",
+          "front": "What is a while loop?",
+          "back": "A while loop repeats a block of code as long as a specified condition remains true. It checks the condition before each iteration."
+        },
+        {
+          "id": "cs-9",
+          "front": "What is a do-while loop?",
+          "back": "A do-while loop is similar to a while loop, but it executes the code block at least once before checking the condition."
+        },
+        {
+          "id": "cs-10",
+          "front": "What is a break statement?",
+          "back": "A break statement terminates the execution of a loop or switch statement, causing the program to continue with the next statement after the loop."
+        }
+      ]
+    },
+    {
+      "id": "functions-methods",
+      "title": "Functions & Methods",
+      "description": "Understanding how to create and use functions effectively",
+      "cards": [
+        {
+          "id": "fm-1",
+          "front": "What is function definition?",
+          "back": "Function definition is the process of creating a function by specifying its name, parameters, and the code it will execute when called."
+        },
+        {
+          "id": "fm-2",
+          "front": "What is function calling?",
+          "back": "Function calling is the process of executing a function by using its name followed by parentheses, optionally passing arguments."
+        },
+        {
+          "id": "fm-3",
+          "front": "What is an argument?",
+          "back": "An argument is the actual value passed to a function when it is called. It corresponds to the parameter defined in the function."
+        },
+        {
+          "id": "fm-4",
+          "front": "What is a default parameter?",
+          "back": "A default parameter is a parameter that has a predefined value if no argument is provided when the function is called."
+        },
+        {
+          "id": "fm-5",
+          "front": "What is function overloading?",
+          "back": "Function overloading allows defining multiple functions with the same name but different parameters, enabling different behaviors based on input."
+        },
+        {
+          "id": "fm-6",
+          "front": "What is recursion?",
+          "back": "Recursion is a programming technique where a function calls itself to solve a problem by breaking it down into smaller, similar subproblems."
+        },
+        {
+          "id": "fm-7",
+          "front": "What is a method?",
+          "back": "A method is a function that belongs to an object or class. It can access and modify the object's data and is called using dot notation."
+        },
+        {
+          "id": "fm-8",
+          "front": "What is a callback function?",
+          "back": "A callback function is a function passed as an argument to another function, which is then invoked inside the outer function to complete some action."
+        },
+        {
+          "id": "fm-9",
+          "front": "What is a pure function?",
+          "back": "A pure function always returns the same output for the same input and has no side effects (doesn't modify external state)."
+        },
+        {
+          "id": "fm-10",
+          "front": "What is function scope?",
+          "back": "Function scope refers to the visibility of variables within a function. Variables declared inside a function are only accessible within that function."
+        }
+      ]
+    },
+    {
+      "id": "problem-solving",
+      "title": "Problem Solving & Algorithms",
+      "description": "Learning computational thinking and algorithm design",
+      "cards": [
+        {
+          "id": "ps-1",
+          "front": "What is computational thinking?",
+          "back": "Computational thinking is a problem-solving approach that involves breaking down complex problems into smaller, manageable parts using logical reasoning."
+        },
+        {
+          "id": "ps-2",
+          "front": "What is decomposition?",
+          "back": "Decomposition is breaking down a complex problem into smaller, more manageable parts that are easier to understand and solve individually."
+        },
+        {
+          "id": "ps-3",
+          "front": "What is pattern recognition?",
+          "back": "Pattern recognition is identifying similarities and common elements in problems to apply known solutions and avoid reinventing solutions."
+        },
+        {
+          "id": "ps-4",
+          "front": "What is abstraction?",
+          "back": "Abstraction is focusing on the important details while hiding unnecessary complexity. It involves creating simplified models of complex systems."
+        },
+        {
+          "id": "ps-5",
+          "front": "What is algorithm design?",
+          "back": "Algorithm design is creating step-by-step solutions to problems in a logical and systematic way, ensuring the solution is correct and efficient."
+        },
+        {
+          "id": "ps-6",
+          "front": "What is debugging?",
+          "back": "Debugging is the process of finding and fixing errors (bugs) in computer programs by systematically identifying and resolving issues."
+        },
+        {
+          "id": "ps-7",
+          "front": "What is testing?",
+          "back": "Testing is the process of verifying that a program works correctly by running it with various inputs and checking if the outputs are as expected."
+        },
+        {
+          "id": "ps-8",
+          "front": "What is code documentation?",
+          "back": "Code documentation is writing comments and explanations in code to help others (and yourself) understand what the code does and how it works."
+        },
+        {
+          "id": "ps-9",
+          "front": "What is code readability?",
+          "back": "Code readability refers to how easily code can be understood by other programmers. It involves using clear names, proper formatting, and good structure."
+        },
+        {
+          "id": "ps-10",
+          "front": "What is version control?",
+          "back": "Version control is a system that tracks changes to code over time, allowing developers to collaborate, revert changes, and maintain code history."
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "programming-comprehensive-quiz",
+      "title": "Programming Fundamentals Comprehensive Quiz",
+      "description": "Test your knowledge of programming basics, data types, control structures, functions, and problem solving",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "What is the primary purpose of programming?",
+          "options": [
+            "To make computers look pretty",
+            "To create instructions for computers to follow",
+            "To play games",
+            "To connect to the internet"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q2",
+          "question": "What is an algorithm?",
+          "options": [
+            "A type of computer",
+            "A step-by-step procedure to solve a problem",
+            "A programming language",
+            "A type of error"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q3",
+          "question": "What is a variable in programming?",
+          "options": [
+            "A type of computer",
+            "A named container that stores data values",
+            "A programming language",
+            "A type of error"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q4",
+          "question": "What is the difference between an integer and a floating-point number?",
+          "options": [
+            "There is no difference",
+            "Integers have decimal points, floating-point numbers don't",
+            "Integers are whole numbers, floating-point numbers can have decimals",
+            "Integers are always positive, floating-point numbers can be negative"
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "id": "q5",
+          "question": "What is a string?",
+          "options": [
+            "A type of number",
+            "A sequence of characters enclosed in quotes",
+            "A type of boolean",
+            "A type of array"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q6",
+          "question": "What is a boolean?",
+          "options": [
+            "A type of number",
+            "A type of text",
+            "A data type with only true or false values",
+            "A type of array"
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "id": "q7",
+          "question": "What is an array?",
+          "options": [
+            "A single value",
+            "A collection of elements stored in one variable",
+            "A type of function",
+            "A type of loop"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q8",
+          "question": "What is a function?",
+          "options": [
+            "A type of variable",
+            "A reusable block of code that performs a specific task",
+            "A type of loop",
+            "A type of data"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q9",
+          "question": "What is a parameter?",
+          "options": [
+            "A type of variable",
+            "A variable in a function that receives a value when called",
+            "A type of loop",
+            "A return value"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q10",
+          "question": "What is a conditional statement?",
+          "options": [
+            "A type of loop",
+            "A statement that makes decisions based on conditions",
+            "A type of function",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q11",
+          "question": "What is an if statement?",
+          "options": [
+            "A type of loop",
+            "A conditional statement that executes code if a condition is true",
+            "A type of function",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q12",
+          "question": "What is an else statement?",
+          "options": [
+            "A type of loop",
+            "Code that executes when an if condition is false",
+            "A type of function",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q13",
+          "question": "What is a loop?",
+          "options": [
+            "A type of variable",
+            "A construct that repeats code multiple times",
+            "A type of function",
+            "A type of condition"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q14",
+          "question": "What is a for loop?",
+          "options": [
+            "A loop that runs forever",
+            "A loop that repeats a specific number of times",
+            "A type of function",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q15",
+          "question": "What is a while loop?",
+          "options": [
+            "A loop that runs forever",
+            "A loop that continues while a condition is true",
+            "A type of function",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q16",
+          "question": "What is debugging?",
+          "options": [
+            "Writing new code",
+            "Finding and fixing errors in programs",
+            "A type of loop",
+            "A type of function"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q17",
+          "question": "What is pseudocode?",
+          "options": [
+            "A programming language",
+            "A simplified description of an algorithm for human reading",
+            "A type of error",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q18",
+          "question": "What is scope?",
+          "options": [
+            "A type of variable",
+            "Where a variable can be accessed in a program",
+            "A type of function",
+            "A type of loop"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q19",
+          "question": "What is recursion?",
+          "options": [
+            "A type of loop",
+            "A function that calls itself",
+            "A type of variable",
+            "A type of error"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q20",
+          "question": "What is computational thinking?",
+          "options": [
+            "Thinking like a computer",
+            "A problem-solving approach using logical reasoning",
+            "A type of programming language",
+            "A type of algorithm"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q21",
+          "question": "What is decomposition?",
+          "options": [
+            "Breaking down complex problems into smaller parts",
+            "A type of function",
+            "A type of loop",
+            "A type of variable"
+          ],
+          "correctAnswer": 0
+        },
+        {
+          "id": "q22",
+          "question": "What is pattern recognition?",
+          "options": [
+            "A type of loop",
+            "Identifying similarities in problems to apply known solutions",
+            "A type of function",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q23",
+          "question": "What is abstraction?",
+          "options": [
+            "A type of function",
+            "Focusing on important details while hiding complexity",
+            "A type of loop",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q24",
+          "question": "What is a constant?",
+          "options": [
+            "A variable that can change",
+            "A variable whose value cannot be changed",
+            "A type of function",
+            "A type of loop"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q25",
+          "question": "What is type conversion?",
+          "options": [
+            "A type of function",
+            "Converting a value from one data type to another",
+            "A type of loop",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q26",
+          "question": "What is a method?",
+          "options": [
+            "A type of variable",
+            "A function that belongs to an object or class",
+            "A type of loop",
+            "A type of condition"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q27",
+          "question": "What is code documentation?",
+          "options": [
+            "A type of function",
+            "Writing comments and explanations in code",
+            "A type of loop",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q28",
+          "question": "What is testing?",
+          "options": [
+            "A type of function",
+            "Verifying that a program works correctly",
+            "A type of loop",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q29",
+          "question": "What is version control?",
+          "options": [
+            "A type of function",
+            "A system that tracks changes to code over time",
+            "A type of loop",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q30",
+          "question": "What is code readability?",
+          "options": [
+            "A type of function",
+            "How easily code can be understood by other programmers",
+            "A type of loop",
+            "A type of variable"
+          ],
+          "correctAnswer": 1
+        }
+      ]
+    }
+  ]
+} 

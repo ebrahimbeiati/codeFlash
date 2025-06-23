@@ -1,7 +1,6 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import { learningPaths } from '@/lib/data/learning-paths';
 import { FlashcardReview } from '@/components/FlashcardReview';
 import { Quiz } from '@/components/quiz/Quiz';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/Tabs';
@@ -10,7 +9,6 @@ import { ProgressTracker } from '@/components/ProgressTracker';
 import { getUserProgress, addXP, updateStreak } from '@/lib/utils/progress';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import type { ComponentType } from 'react';
 
 // Add type assertions for React 19 compatibility
 const TabsComponent = Tabs as any;
@@ -20,10 +18,43 @@ const TabsContentComponent = TabsContent as any;
 const LinkComponent = Link as any;
 const ButtonComponent = Button as any;
 
+interface LearningPath {
+  id: string;
+  title: string;
+  description: string;
+  level: string;
+  difficulty?: string;
+  estimatedTime?: string;
+  topics?: string[];
+  sets: Array<{
+    id: string;
+    title: string;
+    description: string;
+    cards: Array<{
+      id: string;
+      front: string;
+      back: string;
+    }>;
+  }>;
+  quizzes: Array<{
+    id: string;
+    title: string;
+    description: string;
+    questions: Array<{
+      id: string;
+      question: string;
+      options: string[];
+      correctAnswer: number;
+    }>;
+  }>;
+}
+
 export default function LearningPathPage() {
   const params = useParams();
   const pathId = params.pathId as string;
-  const path = learningPaths.find(p => p.id === pathId);
+  const [path, setPath] = useState<LearningPath | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [quizXP, setQuizXP] = useState<number | null>(null);
   const [showReward, setShowReward] = useState(false);
   const [userProgress, setUserProgress] = useState(getUserProgress());
@@ -32,6 +63,30 @@ export default function LearningPathPage() {
     // Update progress when component mounts
     setUserProgress(getUserProgress());
   }, []);
+
+  useEffect(() => {
+    const fetchLearningPath = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(`/api/learning-paths/${pathId}`);
+        
+        if (!response.ok) {
+          throw new Error('Learning path not found');
+        }
+        
+        const data = await response.json();
+        setPath(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to load learning path');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (pathId) {
+      fetchLearningPath();
+    }
+  }, [pathId]);
 
   const handleQuizComplete = (score: number) => {
     const xp = Math.round(score); // 1 XP per percent
@@ -46,16 +101,28 @@ export default function LearningPathPage() {
     updateStreak();
   };
 
-  if (!path) {
+  if (loading) {
     return (
       <div className="min-h-screen p-8 flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold  mb-4">Learning path not found</h1>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+        <span className="ml-2 text-sm text-muted-foreground">Loading learning path...</span>
+      </div>
+    );
+  }
+
+  if (error || !path) {
+    return (
+      <div className="min-h-screen p-8 flex flex-col items-center justify-center">
+        <h1 className="text-2xl font-bold mb-4">Learning path not found</h1>
         <LinkComponent href="/">
           <ButtonComponent variant="outline" className="text-xs flex sm:text-sm !px-2 !py-1 bg-cyan-300">← Back to Home</ButtonComponent>
         </LinkComponent>
       </div>
     );
   }
+
+  // Get the first quiz (or create a default one if none exists)
+  const quiz = path.quizzes && path.quizzes.length > 0 ? path.quizzes[0] : null;
 
   return (
     <main className="min-h-screen p-8 bg-background">
@@ -96,7 +163,7 @@ export default function LearningPathPage() {
               </TabsContentComponent>
               
               <TabsContentComponent value="quiz" className="mt-6">
-                {path.quiz && path.quiz.questions && path.quiz.questions.length > 0 ? (
+                {quiz && quiz.questions && quiz.questions.length > 0 ? (
                   <>
                     {showReward && quizXP !== null && (
                       <div className="mb-6 p-4 rounded-lg bg-green-50 border border-green-200 text-green-800 text-center">
@@ -108,8 +175,12 @@ export default function LearningPathPage() {
                         </div>
                       </div>
                     )}
+                    <div className="mb-6">
+                      <h2 className="text-2xl font-bold mb-2">{quiz.title}</h2>
+                      <p className="text-muted-foreground">{quiz.description}</p>
+                    </div>
                     <Quiz
-                      questions={path.quiz.questions}
+                      questions={quiz.questions}
                       onComplete={handleQuizComplete}
                     />
                   </>

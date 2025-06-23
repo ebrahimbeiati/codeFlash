@@ -1,0 +1,894 @@
+{
+  "id": "nodejs-basics",
+  "title": "Node.js",
+  "description": "Learn Node.js from basics to advanced concepts",
+  "level": "beginner",
+  "category": "backend",
+  "createdAt": "2025-06-23T18:03:13.489Z",
+  "updatedAt": "2025-06-23T18:03:13.489Z",
+  "sets": [
+    {
+      "id": "nodejs-beginner",
+      "title": "Node.js Beginner",
+      "description": "Basic Node.js concepts and features",
+      "category": "nodejs",
+      "createdAt": "2025-06-23T18:03:13.489Z",
+      "updatedAt": "2025-06-23T18:03:13.489Z",
+      "cards": [
+        {
+          "id": "nodejs-b-1",
+          "front": "What is Node.js?",
+          "back": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine that allows you to run JavaScript on the server side.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-2",
+          "front": "What is the purpose of require()?",
+          "back": "require() is a function used to import modules in Node.js, allowing you to use code from other files or installed packages.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-3",
+          "front": "What is the purpose of module.exports?",
+          "back": "module.exports is an object that defines what a module exports, allowing you to make functions, objects, or values available to other files.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-4",
+          "front": "What is npm?",
+          "back": "npm (Node Package Manager) is the default package manager for Node.js, used to install and manage dependencies.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-5",
+          "front": "What is package.json?",
+          "back": "package.json is a file that contains metadata about your Node.js project, including dependencies, scripts, and project information.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-6",
+          "front": "What is the purpose of __dirname?",
+          "back": "__dirname is a global variable that contains the directory name of the currently executing file.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-7",
+          "front": "What is the purpose of __filename?",
+          "back": "__filename is a global variable that contains the file name of the currently executing file.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-8",
+          "front": "What is the purpose of process.argv?",
+          "back": "process.argv is an array containing the command line arguments passed when the Node.js process was launched.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-9",
+          "front": "What is the purpose of process.exit()?",
+          "back": "process.exit() is a method that terminates the Node.js process with the specified exit code.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-10",
+          "front": "What is the purpose of process.cwd()?",
+          "back": "process.cwd() returns the current working directory of the Node.js process.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-11",
+          "front": "What is the purpose of process.env?",
+          "back": "process.env is an object containing the user environment variables.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-12",
+          "front": "What is the purpose of process.nextTick()?",
+          "back": "process.nextTick() adds a callback to the next tick queue, which will be executed after the current operation completes.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-13",
+          "front": "What is the purpose of process.on()?",
+          "back": "process.on() is used to register event listeners for process events.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-14",
+          "front": "What is the purpose of process.stdout?",
+          "back": "process.stdout is a writable stream that represents the standard output of the Node.js process.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-15",
+          "front": "What is the purpose of process.stderr?",
+          "back": "process.stderr is a writable stream that represents the standard error output of the Node.js process.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-16",
+          "front": "What is the purpose of process.stdin?",
+          "back": "process.stdin is a readable stream that represents the standard input of the Node.js process.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-b-17",
+          "front": "What is the purpose of process.versions?",
+          "back": "process.versions is an object containing the version strings of Node.js and its dependencies.",
+          "category": "nodejs",
+          "difficulty": "easy",
+          "reviewCount": 0,
+          "correctCount": 0
+        }
+      ]
+    },
+    {
+      "id": "nodejs-intermediate",
+      "title": "Node.js Intermediate",
+      "description": "Intermediate Node.js concepts and features",
+      "category": "nodejs",
+      "createdAt": "2025-06-23T18:03:13.489Z",
+      "updatedAt": "2025-06-23T18:03:13.489Z",
+      "cards": [
+        {
+          "id": "nodejs-i-1",
+          "front": "What is the purpose of Buffer?",
+          "back": "Buffer is a class that handles binary data in Node.js, allowing you to work with streams of binary data.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-2",
+          "front": "What is the purpose of Stream?",
+          "back": "Stream is an abstract interface for working with streaming data in Node.js, allowing you to handle data that comes in chunks.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-3",
+          "front": "What is the purpose of EventEmitter?",
+          "back": "EventEmitter is a class that provides an event-driven architecture, allowing objects to communicate with each other through events.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-4",
+          "front": "What is the purpose of fs.promises?",
+          "back": "fs.promises provides a promise-based version of the Node.js file system module.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-5",
+          "front": "What is the purpose of path.join()?",
+          "back": "path.join() joins all given path segments together using the platform-specific separator.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-6",
+          "front": "What is the purpose of path.resolve()?",
+          "back": "path.resolve() resolves a sequence of paths or path segments into an absolute path.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-7",
+          "front": "What is the purpose of path.parse()?",
+          "back": "path.parse() returns an object whose properties represent significant elements of the path.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-8",
+          "front": "What is the purpose of path.format()?",
+          "back": "path.format() returns a path string from an object, the opposite of path.parse().",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-9",
+          "front": "What is the purpose of path.normalize()?",
+          "back": "path.normalize() normalizes the given path, resolving '..' and '.' segments.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-10",
+          "front": "What is the purpose of path.isAbsolute()?",
+          "back": "path.isAbsolute() determines if path is an absolute path.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-11",
+          "front": "What is the purpose of path.relative()?",
+          "back": "path.relative() returns the relative path from from to to based on the current working directory.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-12",
+          "front": "What is the purpose of path.dirname()?",
+          "back": "path.dirname() returns the directory name of a path.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-13",
+          "front": "What is the purpose of path.basename()?",
+          "back": "path.basename() returns the last portion of a path.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-14",
+          "front": "What is the purpose of path.extname()?",
+          "back": "path.extname() returns the extension of the path.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-15",
+          "front": "What is the purpose of path.sep?",
+          "back": "path.sep provides the platform-specific path segment separator.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-16",
+          "front": "What is the purpose of path.delimiter?",
+          "back": "path.delimiter provides the platform-specific path delimiter.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-i-17",
+          "front": "What is the purpose of path.posix?",
+          "back": "path.posix provides access to POSIX specific implementations of the path methods.",
+          "category": "nodejs",
+          "difficulty": "medium",
+          "reviewCount": 0,
+          "correctCount": 0
+        }
+      ]
+    },
+    {
+      "id": "nodejs-advanced",
+      "title": "Node.js Advanced",
+      "description": "Advanced Node.js concepts and features",
+      "category": "nodejs",
+      "createdAt": "2025-06-23T18:03:13.489Z",
+      "updatedAt": "2025-06-23T18:03:13.489Z",
+      "cards": [
+        {
+          "id": "nodejs-a-1",
+          "front": "What is the purpose of Worker Threads?",
+          "back": "Worker Threads allow you to run JavaScript in parallel, enabling CPU-intensive tasks to be executed without blocking the main thread.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-2",
+          "front": "What is the purpose of Cluster?",
+          "back": "Cluster is a module that allows you to create child processes that share server ports, enabling you to scale your Node.js application across multiple CPU cores.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-3",
+          "front": "What is the purpose of the Event Loop?",
+          "back": "The Event Loop is a mechanism that allows Node.js to perform non-blocking I/O operations, despite JavaScript being single-threaded, by offloading operations to the system kernel whenever possible.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-4",
+          "front": "What is the purpose of process.hrtime()?",
+          "back": "process.hrtime() returns the current high-resolution real time in a [seconds, nanoseconds] tuple.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-5",
+          "front": "What is the purpose of process.memoryUsage()?",
+          "back": "process.memoryUsage() returns an object describing the memory usage of the Node.js process.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-6",
+          "front": "What is the purpose of process.cpuUsage()?",
+          "back": "process.cpuUsage() returns the user and system CPU time usage of the current process.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-7",
+          "front": "What is the purpose of process.uptime()?",
+          "back": "process.uptime() returns the number of seconds the current Node.js process has been running.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-8",
+          "front": "What is the purpose of process.kill()?",
+          "back": "process.kill() sends a signal to a process identified by pid.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-9",
+          "front": "What is the purpose of process.abort()?",
+          "back": "process.abort() causes the Node.js process to exit immediately and generate a core file.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-10",
+          "front": "What is the purpose of process.chdir()?",
+          "back": "process.chdir() changes the current working directory of the Node.js process.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-11",
+          "front": "What is the purpose of process.umask()?",
+          "back": "process.umask() sets or returns the process's file mode creation mask.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-12",
+          "front": "What is the purpose of process.getuid()?",
+          "back": "process.getuid() returns the numeric user identity of the process.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-13",
+          "front": "What is the purpose of process.getgid()?",
+          "back": "process.getgid() returns the numeric group identity of the process.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-14",
+          "front": "What is the purpose of process.setuid()?",
+          "back": "process.setuid() sets the user identity of the process.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-15",
+          "front": "What is the purpose of process.setgid()?",
+          "back": "process.setgid() sets the group identity of the process.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        },
+        {
+          "id": "nodejs-a-16",
+          "front": "What is the purpose of process.getgroups()?",
+          "back": "process.getgroups() returns an array with the supplementary group IDs.",
+          "category": "nodejs",
+          "difficulty": "hard",
+          "reviewCount": 0,
+          "correctCount": 0
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "nodejs-quiz",
+      "title": "Node.js Quiz",
+      "description": "Test your knowledge of Node.js concepts",
+      "category": "nodejs",
+      "passingScore": 70,
+      "createdAt": "2025-06-23T18:03:13.489Z",
+      "updatedAt": "2025-06-23T18:03:13.489Z",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "What is Node.js?",
+          "options": [
+            "A programming language",
+            "A JavaScript runtime",
+            "A database",
+            "A web browser"
+          ],
+          "correctAnswer": 1,
+          "category": "nodejs",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q2",
+          "question": "What is npm?",
+          "options": [
+            "Node Package Manager",
+            "Node Process Manager",
+            "Node Program Manager",
+            "Node Project Manager"
+          ],
+          "correctAnswer": 0,
+          "category": "nodejs",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q3",
+          "question": "What is the purpose of package.json?",
+          "options": [
+            "To store JavaScript code",
+            "To store project metadata and dependencies",
+            "To store HTML templates",
+            "To store CSS styles"
+          ],
+          "correctAnswer": 1,
+          "category": "nodejs",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q4",
+          "question": "What is the purpose of __dirname?",
+          "options": [
+            "To get the current file name",
+            "To get the current directory name",
+            "To get the current working directory",
+            "To get the current process ID"
+          ],
+          "correctAnswer": 1,
+          "category": "nodejs",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q5",
+          "question": "What is the purpose of process.argv?",
+          "options": [
+            "To access environment variables",
+            "To access command line arguments",
+            "To access file system",
+            "To access network interfaces"
+          ],
+          "correctAnswer": 1,
+          "category": "nodejs",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q6",
+          "question": "What is the purpose of process.env?",
+          "options": [
+            "To access command line arguments",
+            "To access environment variables",
+            "To access file system",
+            "To access network interfaces"
+          ],
+          "correctAnswer": 1,
+          "category": "nodejs",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q7",
+          "question": "What is the purpose of process.stdout?",
+          "options": [
+            "Standard error output",
+            "Standard input",
+            "Standard output",
+            "Standard warning output"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q8",
+          "question": "What is the purpose of process.stderr?",
+          "options": [
+            "Standard output",
+            "Standard input",
+            "Standard error output",
+            "Standard warning output"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q9",
+          "question": "What is the purpose of process.stdin?",
+          "options": [
+            "Standard output",
+            "Standard error output",
+            "Standard input",
+            "Standard warning output"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q10",
+          "question": "What is the purpose of process.versions?",
+          "options": [
+            "To get the current process ID",
+            "To get the current working directory",
+            "To get Node.js and dependency versions",
+            "To get the current file name"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "easy"
+        },
+        {
+          "id": "q11",
+          "question": "What is the purpose of Buffer?",
+          "options": [
+            "To handle HTTP requests",
+            "To handle binary data",
+            "To handle file system operations",
+            "To handle network operations"
+          ],
+          "correctAnswer": 1,
+          "category": "nodejs",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q12",
+          "question": "What is the purpose of Stream?",
+          "options": [
+            "To handle HTTP requests",
+            "To handle file system operations",
+            "To handle streaming data",
+            "To handle network operations"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q13",
+          "question": "What is the purpose of EventEmitter?",
+          "options": [
+            "To handle HTTP requests",
+            "To handle file system operations",
+            "To handle network operations",
+            "To handle event-driven architecture"
+          ],
+          "correctAnswer": 3,
+          "category": "nodejs",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q14",
+          "question": "What is the purpose of fs.promises?",
+          "options": [
+            "To handle HTTP requests",
+            "To handle file system operations with promises",
+            "To handle network operations",
+            "To handle event-driven architecture"
+          ],
+          "correctAnswer": 1,
+          "category": "nodejs",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q15",
+          "question": "What is the purpose of path.join()?",
+          "options": [
+            "To split a path",
+            "To join path segments",
+            "To normalize a path",
+            "To resolve a path"
+          ],
+          "correctAnswer": 1,
+          "category": "nodejs",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q16",
+          "question": "What is the purpose of path.resolve()?",
+          "options": [
+            "To split a path",
+            "To join path segments",
+            "To normalize a path",
+            "To resolve a path to absolute path"
+          ],
+          "correctAnswer": 3,
+          "category": "nodejs",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q17",
+          "question": "What is the purpose of path.parse()?",
+          "options": [
+            "To split a path",
+            "To join path segments",
+            "To parse a path into segments",
+            "To resolve a path"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q18",
+          "question": "What is the purpose of path.format()?",
+          "options": [
+            "To split a path",
+            "To join path segments",
+            "To format path segments into a path",
+            "To resolve a path"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q19",
+          "question": "What is the purpose of path.normalize()?",
+          "options": [
+            "To split a path",
+            "To join path segments",
+            "To normalize a path",
+            "To resolve a path"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q20",
+          "question": "What is the purpose of path.isAbsolute()?",
+          "options": [
+            "To split a path",
+            "To join path segments",
+            "To check if a path is absolute",
+            "To resolve a path"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "medium"
+        },
+        {
+          "id": "q21",
+          "question": "What is the purpose of Worker Threads?",
+          "options": [
+            "To handle HTTP requests",
+            "To handle file system operations",
+            "To run JavaScript in parallel",
+            "To handle network operations"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q22",
+          "question": "What is the purpose of Cluster?",
+          "options": [
+            "To handle HTTP requests",
+            "To handle file system operations",
+            "To handle network operations",
+            "To scale Node.js across CPU cores"
+          ],
+          "correctAnswer": 3,
+          "category": "nodejs",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q23",
+          "question": "What is the purpose of the Event Loop?",
+          "options": [
+            "To handle HTTP requests",
+            "To handle file system operations",
+            "To handle network operations",
+            "To perform non-blocking I/O operations"
+          ],
+          "correctAnswer": 3,
+          "category": "nodejs",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q24",
+          "question": "What is the purpose of process.hrtime()?",
+          "options": [
+            "To get current time",
+            "To get high-resolution real time",
+            "To get process uptime",
+            "To get process memory usage"
+          ],
+          "correctAnswer": 1,
+          "category": "nodejs",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q25",
+          "question": "What is the purpose of process.memoryUsage()?",
+          "options": [
+            "To get current time",
+            "To get high-resolution real time",
+            "To get process uptime",
+            "To get process memory usage"
+          ],
+          "correctAnswer": 3,
+          "category": "nodejs",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q26",
+          "question": "What is the purpose of process.cpuUsage()?",
+          "options": [
+            "To get current time",
+            "To get high-resolution real time",
+            "To get CPU time usage",
+            "To get process memory usage"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q27",
+          "question": "What is the purpose of process.uptime()?",
+          "options": [
+            "To get current time",
+            "To get high-resolution real time",
+            "To get process uptime",
+            "To get process memory usage"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q28",
+          "question": "What is the purpose of process.kill()?",
+          "options": [
+            "To get current time",
+            "To get high-resolution real time",
+            "To send a signal to a process",
+            "To get process memory usage"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q29",
+          "question": "What is the purpose of process.abort()?",
+          "options": [
+            "To get current time",
+            "To get high-resolution real time",
+            "To exit and generate core file",
+            "To get process memory usage"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "hard"
+        },
+        {
+          "id": "q30",
+          "question": "What is the purpose of process.chdir()?",
+          "options": [
+            "To get current time",
+            "To get high-resolution real time",
+            "To change working directory",
+            "To get process memory usage"
+          ],
+          "correctAnswer": 2,
+          "category": "nodejs",
+          "difficulty": "hard"
+        }
+      ]
+    }
+  ]
+}

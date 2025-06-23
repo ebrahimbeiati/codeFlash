@@ -1,0 +1,635 @@
+{
+  "id": "intro-to-digital",
+  "title": "Introduction to Digital Literacy",
+  "description": "Master the fundamentals of digital technology, computer systems, and online safety",
+  "level": "beginner",
+  "difficulty": "beginner",
+  "estimatedTime": "4-6 hours",
+  "topics": ["Digital Literacy", "Computer Systems", "Internet & Web", "Cybersecurity", "Digital Communication"],
+  "sets": [
+    {
+      "id": "computer-fundamentals",
+      "title": "Computer Fundamentals",
+      "description": "Understanding computer hardware, software, and basic operations",
+      "cards": [
+        {
+          "id": "cf-1",
+          "front": "What is a computer?",
+          "back": "A computer is an electronic device that processes data according to instructions, performing calculations and operations automatically using binary code (0s and 1s)."
+        },
+        {
+          "id": "cf-2",
+          "front": "What is the CPU and what does it do?",
+          "back": "The CPU (Central Processing Unit) is the brain of the computer that executes instructions, performs calculations, and manages data flow between components."
+        },
+        {
+          "id": "cf-3",
+          "front": "What is RAM and why is it important?",
+          "back": "RAM (Random Access Memory) is temporary storage that holds data and programs currently in use. It's fast but volatile - data is lost when power is turned off."
+        },
+        {
+          "id": "cf-4",
+          "front": "What is the difference between RAM and storage?",
+          "back": "RAM is fast, temporary memory for active programs, while storage (HDD/SSD) is slower but permanent memory for files and programs when not in use."
+        },
+        {
+          "id": "cf-5",
+          "front": "What is a motherboard?",
+          "back": "The motherboard is the main circuit board that connects all computer components, including CPU, RAM, storage, and expansion cards."
+        },
+        {
+          "id": "cf-6",
+          "front": "What is an operating system?",
+          "back": "An operating system is software that manages computer hardware and software resources, providing a user interface and common services for applications."
+        },
+        {
+          "id": "cf-7",
+          "front": "What are the main functions of an operating system?",
+          "back": "Process management, memory management, file system management, device management, security, and user interface."
+        },
+        {
+          "id": "cf-8",
+          "front": "What is the difference between system software and application software?",
+          "back": "System software manages hardware and provides platform for applications (OS, drivers), while application software performs specific tasks for users (word processors, games)."
+        },
+        {
+          "id": "cf-9",
+          "front": "What is a driver?",
+          "back": "A driver is software that allows the operating system to communicate with hardware devices like printers, graphics cards, or USB devices."
+        },
+        {
+          "id": "cf-10",
+          "front": "What is binary code?",
+          "back": "Binary code is the language computers use, consisting of only two digits: 0 and 1. Each digit is called a bit, and 8 bits make a byte."
+        }
+      ]
+    },
+    {
+      "id": "internet-basics",
+      "title": "Internet & World Wide Web",
+      "description": "Understanding how the internet works and web technologies",
+      "cards": [
+        {
+          "id": "ib-1",
+          "front": "What is the Internet?",
+          "back": "The Internet is a global network of interconnected computers and servers that allows information sharing and communication worldwide using standardized protocols."
+        },
+        {
+          "id": "ib-2",
+          "front": "What is the difference between Internet and World Wide Web?",
+          "back": "The Internet is the network infrastructure, while the World Wide Web is a service that runs on the Internet using HTTP protocol to share web pages."
+        },
+        {
+          "id": "ib-3",
+          "front": "What is a web browser?",
+          "back": "A web browser is software that interprets HTML, CSS, and JavaScript to display web pages and allows users to navigate the World Wide Web."
+        },
+        {
+          "id": "ib-4",
+          "front": "What is a URL and what are its components?",
+          "back": "A URL (Uniform Resource Locator) consists of protocol (http/https), domain name, path, and optional parameters. Example: https://www.example.com/page?id=123"
+        },
+        {
+          "id": "ib-5",
+          "front": "What is DNS and what does it do?",
+          "back": "DNS (Domain Name System) translates human-readable domain names (like google.com) into IP addresses that computers can understand."
+        },
+        {
+          "id": "ib-6",
+          "front": "What is a search engine?",
+          "back": "A search engine is a web service that indexes web pages and allows users to find information by entering keywords or phrases."
+        },
+        {
+          "id": "ib-7",
+          "front": "What is HTTP and HTTPS?",
+          "back": "HTTP (Hypertext Transfer Protocol) is the protocol for transferring web data. HTTPS adds encryption (SSL/TLS) for secure communication."
+        },
+        {
+          "id": "ib-8",
+          "front": "What is a cookie?",
+          "back": "A cookie is a small text file stored by websites on your computer to remember preferences, login status, and track user behavior."
+        },
+        {
+          "id": "ib-9",
+          "front": "What is a cache?",
+          "back": "A cache is temporary storage that stores frequently accessed data to improve loading speed and reduce server requests."
+        },
+        {
+          "id": "ib-10",
+          "front": "What is bandwidth?",
+          "back": "Bandwidth is the maximum amount of data that can be transmitted over a network connection in a given time period, usually measured in bits per second."
+        }
+      ]
+    },
+    {
+      "id": "digital-communication",
+      "title": "Digital Communication",
+      "description": "Understanding email, messaging, and online communication tools",
+      "cards": [
+        {
+          "id": "dc-1",
+          "front": "What is email and how does it work?",
+          "back": "Email (electronic mail) is a method of exchanging digital messages using SMTP protocol. Messages are sent through email servers to recipients."
+        },
+        {
+          "id": "dc-2",
+          "front": "What are the components of an email address?",
+          "back": "An email address consists of a username, @ symbol, and domain name. Example: user@example.com"
+        },
+        {
+          "id": "dc-3",
+          "front": "What is instant messaging?",
+          "back": "Instant messaging allows real-time text communication between users over the internet, often with additional features like file sharing and video calls."
+        },
+        {
+          "id": "dc-4",
+          "front": "What is VoIP?",
+          "back": "VoIP (Voice over Internet Protocol) allows voice communication over the internet instead of traditional phone lines, like Skype or Zoom."
+        },
+        {
+          "id": "dc-5",
+          "front": "What is video conferencing?",
+          "back": "Video conferencing allows face-to-face communication over the internet using video and audio technology, enabling remote meetings and collaboration."
+        },
+        {
+          "id": "dc-6",
+          "front": "What is social media?",
+          "back": "Social media are online platforms that allow users to create, share, and interact with content and connect with others through profiles and networks."
+        },
+        {
+          "id": "dc-7",
+          "front": "What is a blog?",
+          "back": "A blog is a regularly updated website or web page, typically run by an individual or small group, written in an informal or conversational style."
+        },
+        {
+          "id": "dc-8",
+          "front": "What is a forum?",
+          "back": "A forum is an online discussion site where people can hold conversations in the form of posted messages, organized by topics or categories."
+        },
+        {
+          "id": "dc-9",
+          "front": "What is netiquette?",
+          "back": "Netiquette is the set of rules for proper behavior and courtesy when communicating online, including being respectful and avoiding spam."
+        },
+        {
+          "id": "dc-10",
+          "front": "What is digital footprint?",
+          "back": "A digital footprint is the trail of data you leave behind when using the internet, including social media posts, search history, and online purchases."
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity",
+      "title": "Cybersecurity & Online Safety",
+      "description": "Protecting yourself and your data online",
+      "cards": [
+        {
+          "id": "cs-1",
+          "front": "What is cybersecurity?",
+          "back": "Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks, damage, or unauthorized access."
+        },
+        {
+          "id": "cs-2",
+          "front": "What is a password and why is it important?",
+          "back": "A password is a secret combination of characters used to verify identity and protect accounts from unauthorized access. It's the first line of defense."
+        },
+        {
+          "id": "cs-3",
+          "front": "What makes a strong password?",
+          "back": "A strong password is at least 12 characters long, includes uppercase and lowercase letters, numbers, special characters, and avoids common words."
+        },
+        {
+          "id": "cs-4",
+          "front": "What is two-factor authentication (2FA)?",
+          "back": "2FA adds an extra layer of security by requiring a second form of verification (like a code sent to your phone) in addition to your password."
+        },
+        {
+          "id": "cs-5",
+          "front": "What is phishing?",
+          "back": "Phishing is a cyber attack where criminals impersonate legitimate organizations to trick users into revealing personal information or clicking malicious links."
+        },
+        {
+          "id": "cs-6",
+          "front": "What is malware?",
+          "back": "Malware is malicious software designed to harm computers, steal data, or gain unauthorized access. Types include viruses, worms, trojans, and ransomware."
+        },
+        {
+          "id": "cs-7",
+          "front": "What is a firewall?",
+          "back": "A firewall is a security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules."
+        },
+        {
+          "id": "cs-8",
+          "front": "What is encryption?",
+          "back": "Encryption is the process of converting information into a code to prevent unauthorized access. Only those with the correct key can decrypt the information."
+        },
+        {
+          "id": "cs-9",
+          "front": "What is a VPN?",
+          "back": "A VPN (Virtual Private Network) creates a secure, encrypted connection over the internet, protecting your privacy and allowing secure access to networks."
+        },
+        {
+          "id": "cs-10",
+          "front": "What is identity theft?",
+          "back": "Identity theft occurs when someone steals your personal information to commit fraud, such as opening accounts or making purchases in your name."
+        }
+      ]
+    },
+    {
+      "id": "digital-literacy",
+      "title": "Digital Literacy Skills",
+      "description": "Essential skills for navigating the digital world",
+      "cards": [
+        {
+          "id": "dl-1",
+          "front": "What is digital literacy?",
+          "back": "Digital literacy is the ability to use digital technology, communication tools, and networks to access, manage, integrate, evaluate, and create information."
+        },
+        {
+          "id": "dl-2",
+          "front": "What is information literacy?",
+          "back": "Information literacy is the ability to find, evaluate, and use information effectively, including determining credibility and relevance of sources."
+        },
+        {
+          "id": "dl-3",
+          "front": "What is media literacy?",
+          "back": "Media literacy is the ability to access, analyze, evaluate, and create media messages, understanding how media influences society and individuals."
+        },
+        {
+          "id": "dl-4",
+          "front": "What is critical thinking in digital context?",
+          "back": "Critical thinking involves analyzing digital information, questioning sources, evaluating evidence, and making informed decisions about online content."
+        },
+        {
+          "id": "dl-5",
+          "front": "What is digital citizenship?",
+          "back": "Digital citizenship is the responsible use of technology, including ethical behavior, respecting others online, and contributing positively to digital communities."
+        },
+        {
+          "id": "dl-6",
+          "front": "What is digital etiquette?",
+          "back": "Digital etiquette (netiquette) involves following proper behavior guidelines when communicating online, including being respectful and considerate."
+        },
+        {
+          "id": "dl-7",
+          "front": "What is digital access?",
+          "back": "Digital access refers to the ability to use technology and the internet, including having the necessary devices, connectivity, and skills."
+        },
+        {
+          "id": "dl-8",
+          "front": "What is digital commerce?",
+          "back": "Digital commerce involves buying and selling goods and services online, understanding e-commerce platforms, payment methods, and consumer rights."
+        },
+        {
+          "id": "dl-9",
+          "front": "What is digital law?",
+          "back": "Digital law involves understanding legal and ethical issues related to technology use, including copyright, privacy laws, and cybercrime."
+        },
+        {
+          "id": "dl-10",
+          "front": "What is digital health and wellness?",
+          "back": "Digital health and wellness involves maintaining physical and psychological well-being in a digital world, including managing screen time and online stress."
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "digital-comprehensive-quiz",
+      "title": "Digital Literacy Comprehensive Quiz",
+      "description": "Test your knowledge of digital fundamentals, internet, cybersecurity, and digital literacy",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "What is the primary function of the CPU in a computer?",
+          "options": [
+            "To store data permanently",
+            "To execute instructions and perform calculations",
+            "To display images on screen",
+            "To connect to the internet"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q2",
+          "question": "Which of the following is volatile memory?",
+          "options": [
+            "Hard Disk Drive (HDD)",
+            "Solid State Drive (SSD)",
+            "Random Access Memory (RAM)",
+            "USB Flash Drive"
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "id": "q3",
+          "question": "What does DNS stand for and what does it do?",
+          "options": [
+            "Digital Network System - connects computers",
+            "Domain Name System - translates domain names to IP addresses",
+            "Data Network Service - provides internet access",
+            "Dynamic Network Security - protects against attacks"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q4",
+          "question": "What is the difference between HTTP and HTTPS?",
+          "options": [
+            "HTTPS is faster than HTTP",
+            "HTTPS adds encryption for secure communication",
+            "HTTP is for websites, HTTPS is for emails",
+            "There is no difference"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q5",
+          "question": "What is phishing?",
+          "options": [
+            "A type of computer virus",
+            "A cyber attack that tricks users into revealing personal information",
+            "A method of data encryption",
+            "A type of firewall"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q6",
+          "question": "What makes a password strong?",
+          "options": [
+            "Using only numbers",
+            "Using only letters",
+            "Being at least 12 characters with mixed case, numbers, and symbols",
+            "Using your name or birthdate"
+          ],
+          "correctAnswer": 2
+        },
+        {
+          "id": "q7",
+          "question": "What is two-factor authentication?",
+          "options": [
+            "Using two different passwords",
+            "Adding a second form of verification beyond password",
+            "Having two email accounts",
+            "Using two different browsers"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q8",
+          "question": "What is a firewall?",
+          "options": [
+            "A type of antivirus software",
+            "A security system that monitors network traffic",
+            "A password manager",
+            "A type of encryption"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q9",
+          "question": "What is a digital footprint?",
+          "options": [
+            "Your shoe size in digital format",
+            "The trail of data you leave online",
+            "A type of digital signature",
+            "Your computer's IP address"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q10",
+          "question": "What is netiquette?",
+          "options": [
+            "A type of internet protocol",
+            "Rules for proper online behavior",
+            "A security certificate",
+            "A type of web browser"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q11",
+          "question": "What is the main purpose of an operating system?",
+          "options": [
+            "To play games",
+            "To manage hardware and software resources",
+            "To connect to the internet",
+            "To create documents"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q12",
+          "question": "What is a cookie in web browsing?",
+          "options": [
+            "A type of virus",
+            "A small text file that stores website data",
+            "A type of encryption",
+            "A web browser feature"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q13",
+          "question": "What is bandwidth?",
+          "options": [
+            "The width of your computer screen",
+            "The maximum data transfer rate of a connection",
+            "The amount of storage on your hard drive",
+            "The speed of your processor"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q14",
+          "question": "What is VoIP?",
+          "options": [
+            "A type of email service",
+            "Voice communication over the internet",
+            "A security protocol",
+            "A type of web browser"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q15",
+          "question": "What is malware?",
+          "options": [
+            "Software that helps your computer",
+            "Malicious software designed to harm computers",
+            "A type of firewall",
+            "A backup system"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q16",
+          "question": "What is encryption?",
+          "options": [
+            "A type of password",
+            "Converting information into a code to prevent unauthorized access",
+            "A backup method",
+            "A type of antivirus"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q17",
+          "question": "What is a VPN?",
+          "options": [
+            "A type of email service",
+            "A secure, encrypted connection over the internet",
+            "A web browser",
+            "A type of firewall"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q18",
+          "question": "What is digital citizenship?",
+          "options": [
+            "Having a digital passport",
+            "Responsible use of technology and ethical online behavior",
+            "Being good at using computers",
+            "Having many social media accounts"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q19",
+          "question": "What is information literacy?",
+          "options": [
+            "Being able to read digital text",
+            "Finding, evaluating, and using information effectively",
+            "Knowing how to use a computer",
+            "Being able to type quickly"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q20",
+          "question": "What is identity theft?",
+          "options": [
+            "Losing your password",
+            "Someone stealing your personal information to commit fraud",
+            "Having your computer hacked",
+            "Getting a virus"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q21",
+          "question": "What is the difference between the Internet and World Wide Web?",
+          "options": [
+            "There is no difference",
+            "Internet is the network, WWW is a service that runs on it",
+            "Internet is for emails, WWW is for websites",
+            "Internet is faster than WWW"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q22",
+          "question": "What is a driver in computing?",
+          "options": [
+            "Someone who drives a computer",
+            "Software that allows OS to communicate with hardware",
+            "A type of virus",
+            "A backup program"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q23",
+          "question": "What is binary code?",
+          "options": [
+            "A type of encryption",
+            "Computer language using only 0s and 1s",
+            "A programming language",
+            "A type of virus"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q24",
+          "question": "What is a cache?",
+          "options": [
+            "A type of virus",
+            "Temporary storage for frequently accessed data",
+            "A backup system",
+            "A type of firewall"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q25",
+          "question": "What is social media?",
+          "options": [
+            "A type of email",
+            "Online platforms for creating and sharing content",
+            "A type of web browser",
+            "A security system"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q26",
+          "question": "What is digital health and wellness?",
+          "options": [
+            "Using health apps",
+            "Maintaining physical and psychological well-being in digital world",
+            "Having a healthy computer",
+            "Using fitness trackers"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q27",
+          "question": "What is digital law?",
+          "options": [
+            "A type of software license",
+            "Understanding legal issues related to technology use",
+            "A type of encryption",
+            "A security protocol"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q28",
+          "question": "What is digital commerce?",
+          "options": [
+            "Online shopping only",
+            "Buying and selling goods and services online",
+            "A type of payment method",
+            "A security certificate"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q29",
+          "question": "What is media literacy?",
+          "options": [
+            "Being able to read digital media",
+            "Analyzing and evaluating media messages",
+            "Knowing how to use social media",
+            "Being able to create videos"
+          ],
+          "correctAnswer": 1
+        },
+        {
+          "id": "q30",
+          "question": "What is critical thinking in digital context?",
+          "options": [
+            "Thinking quickly while using computers",
+            "Analyzing digital information and making informed decisions",
+            "Being able to type fast",
+            "Knowing how to use many apps"
+          ],
+          "correctAnswer": 1
+        }
+      ]
+    }
+  ]
+} 
