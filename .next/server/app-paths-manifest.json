@@ -1,7 +1,4 @@
 {
   "/api/learning-paths/route": "app/api/learning-paths/route.js",
-  "/api/learning-paths/[pathId]/route": "app/api/learning-paths/[pathId]/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/learning/[pathId]/page": "app/learning/[pathId]/page.js",
   "/page": "app/page.js"
 }
