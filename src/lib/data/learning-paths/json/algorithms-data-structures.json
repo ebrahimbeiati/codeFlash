@@ -730,7 +730,7 @@
           "options": [
             "BFS",
             "DFS",
-            "Both",
+            "Both DFS and BFS",
             "Neither"
           ],
           "correctAnswer": 2
