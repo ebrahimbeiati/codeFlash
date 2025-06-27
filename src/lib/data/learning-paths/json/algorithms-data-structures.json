@@ -130,7 +130,7 @@
         {
           "id": "bds-14",
           "front": "What is a priority queue?",
-          "back": "A priority queue is a data structure where elements are removed based on priority rather than insertion order. Typically implemented using heaps, providing O(log n) insertion and O(1) removal.",
+          "back": "A priority queue is a data structure where elements are removed based on priority rather than insertion order. Typically implemented using heaps, providing O(log n) insertion and O(log n) removal (and O(1) access to the highest-priority element).",
           "category": "data-structures",
           "difficulty": "easy",
           "reviewCount": 0,

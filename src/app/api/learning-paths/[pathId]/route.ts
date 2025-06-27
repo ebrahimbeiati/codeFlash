@@ -8,6 +8,15 @@ export async function GET(
 ) {
   try {
     const { pathId } = await params;
+    
+    // Validate pathId to prevent path traversal
+    if (!/^[a-z0-9-]+$/.test(pathId)) {
+      return NextResponse.json(
+        { error: 'Invalid path ID' },
+        { status: 400 }
+      );
+    }
+    
     const jsonDir = path.join(process.cwd(), 'src/lib/data/learning-paths/json');
     const filePath = path.join(jsonDir, `${pathId}.json`);
     

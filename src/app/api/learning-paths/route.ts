@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
+import { readdir, readFile } from 'fs/promises';
 import path from 'path';
 
 // Define the specific order of learning paths as requested
@@ -22,22 +22,22 @@ const learningPathOrder = [
 export async function GET() {
   try {
     const jsonDir = path.join(process.cwd(), 'src/lib/data/learning-paths/json');
-    const files = fs.readdirSync(jsonDir).filter(file => file.endsWith('.json'));
+    const files = (await readdir(jsonDir)).filter(file => file.endsWith('.json'));
     
-    const learningPaths = files.map(file => {
+    const learningPaths = await Promise.all(files.map(async file => {
       const filePath = path.join(jsonDir, file);
-      const content = fs.readFileSync(filePath, 'utf-8');
+      const content = await readFile(filePath, 'utf-8');
       const data = JSON.parse(content);
       return {
         id: data.id,
         title: data.title,
         description: data.description,
         level: data.level,
-        difficulty: data.difficulty,
-        estimatedTime: data.estimatedTime,
-        topics: data.topics
+        difficulty: data.difficulty || null,
+        estimatedTime: data.estimatedTime || null,
+        topics: data.topics || []
       };
-    });
+    }));
 
     // Sort by the specific order defined above
     learningPaths.sort((a, b) => {

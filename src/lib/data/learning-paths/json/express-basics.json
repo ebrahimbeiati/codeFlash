@@ -112,8 +112,8 @@
       "cards": [
         {
           "id": "express-b-1",
-          "front": "What is Express.js?",
-          "back": "Express.js is a web application framework for Node.js that provides a robust set of features for web and mobile applications.",
+          "front": "What are the key architectural features of Express.js?",
+          "back": "Express.js follows a minimalist, unopinionated architecture with middleware-based request processing, modular routing, and a flexible application structure that supports both simple and complex web applications.",
           "category": "express",
           "difficulty": "easy",
           "reviewCount": 0,

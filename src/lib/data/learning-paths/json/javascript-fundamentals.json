@@ -223,15 +223,6 @@
           "correctCount": 0
         },
         {
-          "id": "js-b24",
-          "front": "What is the difference between == and ===?",
-          "back": "== performs type coercion before comparison, while === checks both value and type without coercion.",
-          "category": "javascript",
-          "difficulty": "easy",
-          "reviewCount": 0,
-          "correctCount": 0
-        },
-        {
           "id": "js-b25",
           "front": "What is the difference between != and !==?",
           "back": "!= performs type coercion before comparison, while !== checks both value and type without coercion.",
@@ -549,15 +540,6 @@
           "correctCount": 0
         },
         {
-          "id": "js-a8",
-          "front": "What is the difference between Object.freeze() and Object.seal()?",
-          "back": "Object.freeze() makes an object immutable, preventing any changes to its properties. Object.seal() prevents adding or removing properties but allows modifying existing ones.",
-          "category": "javascript",
-          "difficulty": "hard",
-          "reviewCount": 0,
-          "correctCount": 0
-        },
-        {
           "id": "js-a9",
           "front": "What is the difference between Object.is() and ===?",
           "back": "Object.is() is similar to === but handles special cases like NaN and -0 differently. Object.is(NaN, NaN) is true, while NaN === NaN is false.",
@@ -621,36 +603,9 @@
           "correctCount": 0
         },
         {
-          "id": "js-a16",
-          "front": "What is the difference between Object.getOwnPropertyDescriptor() and Object.getOwnPropertyDescriptors()?",
-          "back": "Object.getOwnPropertyDescriptor() returns a property descriptor for an own property. Object.getOwnPropertyDescriptors() returns all own property descriptors of an object.",
-          "category": "javascript",
-          "difficulty": "hard",
-          "reviewCount": 0,
-          "correctCount": 0
-        },
-        {
-          "id": "js-a17",
-          "front": "What is the difference between Object.defineProperty() and Object.defineProperties()?",
-          "back": "Object.defineProperty() defines a new property or modifies an existing property on an object. Object.defineProperties() defines multiple properties on an object.",
-          "category": "javascript",
-          "difficulty": "hard",
-          "reviewCount": 0,
-          "correctCount": 0
-        },
-        {
           "id": "js-a18",
           "front": "What is the difference between Object.getPrototypeOf() and Object.setPrototypeOf()?",
           "back": "Object.getPrototypeOf() returns the prototype of an object. Object.setPrototypeOf() sets the prototype of an object to another object or null.",
-          "category": "javascript",
-          "difficulty": "hard",
-          "reviewCount": 0,
-          "correctCount": 0
-        },
-        {
-          "id": "js-a19",
-          "front": "What is the difference between Object.create() and new?",
-          "back": "Object.create() creates a new object with the specified prototype object. new creates an instance of a constructor function, which sets up the prototype chain.",
           "category": "javascript",
           "difficulty": "hard",
           "reviewCount": 0,

@@ -174,7 +174,7 @@
         {
           "id": "ra-12",
           "front": "What is a custom hook?",
-          "back": "A custom hook is a JavaScript function that starts with \"use\" and can call other hooks. It allows you to extract component logic into reusable functions."
+          "back": "A custom hook is a reusable function starting with \"use\" that encapsulates stateful logic. Unlike regular functions, custom hooks can call other React hooks and share state logic between components."
         },
         {
           "id": "ra-13",
@@ -189,7 +189,7 @@
         {
           "id": "ra-15",
           "front": "What is a controlled component?",
-          "back": "A controlled component is a form element whose value is controlled by React state. The component's value is always in sync with the state."
+          "back": "A controlled component is a form element where React controls the value through state and onChange handlers. Every state mutation has an associated handler function, making the React state the \"single source of truth\"."
         },
         {
           "id": "ra-16",

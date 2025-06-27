@@ -1,7 +1,7 @@
 {
   "/api/learning-paths/[pathId]/route": "app/api/learning-paths/[pathId]/route.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/api/learning-paths/route": "app/api/learning-paths/route.js",
-  "/page": "app/page.js",
-  "/learning/[pathId]/page": "app/learning/[pathId]/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/learning/[pathId]/page": "app/learning/[pathId]/page.js",
+  "/page": "app/page.js"
 }

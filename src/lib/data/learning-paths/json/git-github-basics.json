@@ -488,7 +488,7 @@
         {
           "id": "gh-11",
           "front": "What command shows the differences between your local and remote branches?",
-          "back": "git diff origin/<branch-name> - Shows the differences between your local and remote branch.",
+          "back": "git diff <branch>..origin/<branch> - Shows the differences between your local and remote branch, displaying divergence in both directions.",
           "category": "git",
           "difficulty": "easy",
           "reviewCount": 0,
@@ -588,7 +588,7 @@
         {
           "id": "adv-1",
           "front": "How do you undo the last commit?",
-          "back": "git reset HEAD~1 - Undoes the last commit while keeping the changes staged. Add --hard to discard changes.",
+          "back": "git reset --soft HEAD~1 - Moves HEAD back one commit and keeps the changes staged. Use --mixed (default) to unstage or --hard to discard them.",
           "category": "git",
           "difficulty": "easy",
           "reviewCount": 0,
