@@ -52,7 +52,7 @@
     "@playwright/test": "^1.53.2",
     "@shadcn/ui": "^0.0.4",
     "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^15.0.0",
+    "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/jest": "^29.5.14",
     "@types/node": "^20",
@@ -73,5 +73,9 @@
     "ts-jest": "^29.4.0",
     "typescript": "^5.8.3",
     "undici": "^7.11.0"
+  },
+  "overrides": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19"
   }
 }
