@@ -25,9 +25,19 @@ export async function GET(
       const learningPath = JSON.parse(fileContent);
       return NextResponse.json(learningPath);
     } catch (fileError) {
+      // Check if it's a "file not found" error (real or mocked)
+      if (fileError instanceof Error && 
+          (fileError.message.includes('ENOENT') || 
+           fileError.message.includes('File not found'))) {
+        return NextResponse.json(
+          { error: 'Learning path not found' },
+          { status: 404 }
+        );
+      }
+      // For JSON parsing errors or other file system errors, return 500
       return NextResponse.json(
-        { error: 'Learning path not found' },
-        { status: 404 }
+        { error: 'Failed to load learning path' },
+        { status: 500 }
       );
     }
   } catch (error) {

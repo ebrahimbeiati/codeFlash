@@ -1,5 +1,6 @@
 export interface UserProgress {
   streak: number;
+  bestStreak: number;
   xp: number;
   level: number;
   lastStudyDate?: string;
@@ -27,6 +28,7 @@ const FLASHCARD_PROGRESS_KEY = 'codeflash_flashcard_progress';
 
 export const getDefaultProgress = (): UserProgress => ({
   streak: 0,
+  bestStreak: 0,
   xp: 0,
   level: 1,
   lastStudyDate: undefined
@@ -95,9 +97,13 @@ export const updateStreak = (): UserProgress => {
     newStreak = 1; // Reset streak
   }
   
+  // Update best streak if current streak is higher
+  const newBestStreak = Math.max(current.bestStreak, newStreak);
+  
   const updated: UserProgress = {
     ...current,
     streak: newStreak,
+    bestStreak: newBestStreak,
     lastStudyDate: today
   };
   

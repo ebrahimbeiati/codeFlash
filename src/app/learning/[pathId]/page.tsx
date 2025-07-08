@@ -197,6 +197,7 @@ export default function LearningPathPage() {
           <div className="lg:col-span-1">
             <ProgressTracker 
               streak={userProgress.streak}
+              bestStreak={userProgress.bestStreak}
               xp={userProgress.xp}
               level={userProgress.level}
             />

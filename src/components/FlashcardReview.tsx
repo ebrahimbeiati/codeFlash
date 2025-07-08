@@ -216,6 +216,7 @@ export function FlashcardReview({
                 size="sm"
                 onClick={toggleReviewMode}
                 className="text-xs"
+                data-testid="review-mode-toggle"
               >
                 {reviewMode ? 'All Cards' : 'Review Mode'}
               </ButtonComponent>
@@ -224,6 +225,7 @@ export function FlashcardReview({
                 size="sm"
                 onClick={() => setShowProgress(!showProgress)}
                 className="text-xs"
+                data-testid="show-progress-toggle"
               >
                 {showProgress ? 'Hide Progress' : 'Show Progress'}
               </ButtonComponent>
@@ -294,6 +296,7 @@ export function FlashcardReview({
               variant="outline"
               className="flex-1 sm:flex-none bg-green-50 hover:bg-green-100 text-sm sm:text-base h-10 sm:h-12"
               onClick={() => handleReview('known')}
+              data-testid="review-known-button"
             >
               Known
             </ButtonComponent>
@@ -301,6 +304,7 @@ export function FlashcardReview({
               variant="outline"
               className="flex-1 sm:flex-none bg-yellow-50 hover:bg-yellow-100 text-sm sm:text-base h-10 sm:h-12"
               onClick={() => handleReview('review_later')}
+              data-testid="review-later-button"
             >
               Review Later
             </ButtonComponent>
@@ -308,6 +312,7 @@ export function FlashcardReview({
               variant="outline"
               className="flex-1 sm:flex-none bg-red-50 hover:bg-red-100 text-sm sm:text-base h-10 sm:h-12"
               onClick={() => handleReview('dont_know')}
+              data-testid="review-dont-know-button"
             >
               Don't Know
             </ButtonComponent>

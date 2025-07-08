@@ -1,0 +1,2 @@
+// This file has been renamed to babel.config.js.bak to resolve the Next.js SWC/font loader conflict.
+// If you need custom Babel config for Jest, move it to a test-specific config or use Jest's transform option. 

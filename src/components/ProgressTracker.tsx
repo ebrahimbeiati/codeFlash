@@ -3,23 +3,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from './ui/Card';
 import { cn } from '@/lib/utils';
 
+// Add type assertions for React 19 compatibility
+const CardComponent = Card as any;
+const CardHeaderComponent = CardHeader as any;
+const CardTitleComponent = CardTitle as any;
+const CardContentComponent = CardContent as any;
+
 interface ProgressTrackerProps {
   streak: number;
+  bestStreak: number;
   xp: number;
   level: number;
   className?: string;
 }
 
-export function ProgressTracker({ streak, xp, level, className }: ProgressTrackerProps) {
+export function ProgressTracker({ streak, bestStreak, xp, level, className }: ProgressTrackerProps) {
   const xpToNextLevel = Math.pow(level + 1, 2) * 100;
   const progress = (xp / xpToNextLevel) * 100;
 
   return (
-    <Card className={cn('w-full max-w-md mx-auto', className)}>
-      <CardHeader>
-        <CardTitle className="text-center">Your Progress</CardTitle>
-      </CardHeader>
-      <CardContent>
+    <CardComponent className={cn('w-full max-w-md mx-auto', className)} data-testid="progress-tracker">
+      <CardHeaderComponent>
+        <CardTitleComponent className="text-center">Your Progress</CardTitleComponent>
+      </CardHeaderComponent>
+      <CardContentComponent>
         <div className="space-y-6">
           {/* Streak */}
           <div className="flex items-center justify-between">
@@ -39,7 +46,14 @@ export function ProgressTracker({ streak, xp, level, className }: ProgressTracke
               <span>Level {level}</span>
               <span>{xp} / {xpToNextLevel} XP</span>
             </div>
-            <div className="h-2 bg-secondary rounded-full overflow-hidden">
+            <div 
+              className="h-2 bg-secondary rounded-full overflow-hidden"
+              role="progressbar"
+              aria-label={`Level ${level} progress`}
+              aria-valuenow={xp}
+              aria-valuemin={0}
+              aria-valuemax={xpToNextLevel}
+            >
               <div
                 className="h-full bg-primary transition-all duration-500"
                 style={{ width: `${progress}%` }}
@@ -55,11 +69,11 @@ export function ProgressTracker({ streak, xp, level, className }: ProgressTracke
             </div>
             <div className="p-4 bg-secondary rounded-lg">
               <div className="text-sm text-muted-foreground">Best Streak</div>
-              <div className="text-2xl font-bold">{Math.max(streak, 7)}</div>
+              <div className="text-2xl font-bold">{bestStreak}</div>
             </div>
           </div>
         </div>
-      </CardContent>
-    </Card>
+      </CardContentComponent>
+    </CardComponent>
   );
 } 
