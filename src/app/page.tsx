@@ -2,10 +2,9 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Brain, Code, Sparkles, Laptop, Terminal, Database, Zap, Target } from 'lucide-react';
+import { ArrowRight, BookOpen, Brain, Code, Sparkles, Laptop, Terminal, Database, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-// --- Type Assertions for React 19 ---
 const LinkComponent = Link as any;
 const IconWrapper = ({ children, className }: { children: React.ReactNode; className?: string }) => (<div className={className}>{children}</div>);
 const LaptopIcon = Laptop as any;
