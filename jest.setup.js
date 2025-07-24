@@ -62,8 +62,56 @@ Object.defineProperty(window, 'matchMedia', {
 // Mock framer-motion
 jest.mock('framer-motion', () => {
   const React = require('react');
+  
+  // Filter out Framer Motion specific props
+  const filterMotionProps = (props) => {
+    const {
+      initial,
+      animate,
+      exit,
+      transition,
+      variants,
+      whileHover,
+      whileTap,
+      whileFocus,
+      whileDrag,
+      drag,
+      dragConstraints,
+      dragElastic,
+      dragMomentum,
+      dragPropagation,
+      dragSnapToOrigin,
+      dragTransition,
+      layout,
+      layoutId,
+      layoutDependency,
+      layoutScroll,
+      layoutRoot,
+      onAnimationStart,
+      onAnimationComplete,
+      onUpdate,
+      onDragStart,
+      onDragEnd,
+      onDrag,
+      onHoverStart,
+      onHoverEnd,
+      onTap,
+      onTapStart,
+      onTapCancel,
+      onFocus,
+      onBlur,
+      ...filteredProps
+    } = props;
+    
+    return filteredProps;
+  };
+  
   // Dynamically mock any motion.* element as a React element
-  const handler = (tag) => ({ children, ...props }) => React.createElement(tag, props, children);
+  const handler = (tag) => ({ children, ...props }) => {
+    const filteredProps = filterMotionProps(props);
+    return React.createElement(tag, filteredProps, children);
+  };
+  
   return {
     motion: new Proxy({}, {
       get: (_, tag) => handler(tag),
