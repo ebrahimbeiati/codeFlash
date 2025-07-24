@@ -3,6 +3,25 @@ const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
+// Mock Next.js server components
+jest.mock('next/server', () => ({
+  NextRequest: class NextRequest {
+    constructor(url, options = {}) {
+      this.url = url;
+      this.method = options.method || 'GET';
+      this.headers = new Map(Object.entries(options.headers || {}));
+      this.body = options.body;
+    }
+  },
+  NextResponse: {
+    json: (data, options = {}) => ({
+      json: async () => data,
+      status: options.status || 200,
+      headers: new Map(Object.entries(options.headers || {})),
+    }),
+  },
+}));
+
 // React testing library setup
 const React = require('react');
 require('@testing-library/jest-dom');
