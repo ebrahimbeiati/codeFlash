@@ -86,7 +86,7 @@ describe('ProgressTracker Component', () => {
     });
 
     it('should display best streak', () => {
-      render(<ProgressTracker streak={3} xp={100} level={1} />);
+      render(<ProgressTracker streak={3} bestStreak={7} xp={100} level={1} />);
       
       // Should show the higher of current streak or 7
       expect(screen.getByText('7')).toBeInTheDocument();

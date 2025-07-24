@@ -11,15 +11,16 @@ const CardContentComponent = CardContent as any;
 
 interface ProgressTrackerProps {
   streak: number;
-  bestStreak: number;
+  bestStreak?: number;
   xp: number;
   level: number;
   className?: string;
 }
 
-export function ProgressTracker({ streak, bestStreak, xp, level, className }: ProgressTrackerProps) {
+export function ProgressTracker({ streak, bestStreak = 0, xp, level, className }: ProgressTrackerProps) {
   const xpToNextLevel = Math.pow(level + 1, 2) * 100;
   const progress = (xp / xpToNextLevel) * 100;
+  const displayBestStreak = Math.max(streak, bestStreak);
 
   return (
     <CardComponent className={cn('w-full max-w-md mx-auto', className)} data-testid="progress-tracker">
@@ -69,7 +70,7 @@ export function ProgressTracker({ streak, bestStreak, xp, level, className }: Pr
             </div>
             <div className="p-4 bg-secondary rounded-lg">
               <div className="text-sm text-muted-foreground">Best Streak</div>
-              <div className="text-2xl font-bold">{bestStreak}</div>
+              <div className="text-2xl font-bold">{displayBestStreak}</div>
             </div>
           </div>
         </div>

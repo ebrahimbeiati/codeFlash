@@ -27,35 +27,7 @@ const customJestConfig = {
     '!src/**/*.stories.{js,jsx,ts,tsx}',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
 }
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
-module.exports = {
-  projects: [
-    {
-      displayName: 'unit',
-      testMatch: ['<rootDir>/tests/unit/**/*.test.{ts,tsx,js,jsx}'],
-      setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-      testEnvironment: 'jsdom',
-      transform: {
-        '^.+\\.(ts|tsx|js|jsx)$': 'babel-jest',
-      },
-      moduleNameMapper: {
-        '^@/(.*)$': '<rootDir>/src/$1',
-      },
-    },
-    {
-      displayName: 'integration',
-      testMatch: ['<rootDir>/tests/integration/**/*.test.{ts,tsx,js,jsx}'],
-      setupFilesAfterEnv: ['<rootDir>/jest.integration.setup.js'],
-      testEnvironment: 'node',
-      transform: {
-        '^.+\\.(ts|tsx|js|jsx)$': 'babel-jest',
-      },
-      moduleNameMapper: {
-        '^@/(.*)$': '<rootDir>/src/$1',
-      },
-    },
-  ],
-}; 
+module.exports = createJestConfig(customJestConfig) 
