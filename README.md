@@ -1,5 +1,7 @@
 # CodeFlash 🚀
 
+**🌐 Live Demo:** [https://codeflash1.netlify.app/](https://codeflash1.netlify.app/)
+
 A modern, interactive learning platform designed to help developers master programming concepts through flashcards, quizzes, and structured learning paths.
 
 ## ✨ Features
@@ -52,42 +54,33 @@ A modern, interactive learning platform designed to help developers master progr
 ### Advanced Topics
 - **Algorithms & Data Structures** - Computer science fundamentals
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ 
-- npm or yarn package manager
+- Node.js 18+
+- Docker Desktop
 
-### Installation
+### Development (Recommended)
 
-1. **Clone the repository**
+1. **Clone and start**
    ```bash
    git clone https://github.com/ebrahimbeiati/codeFlash.git
    cd codeFlash
+   make dev
    ```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
+2. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-3. **Run the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000) to start learning!
-
-### Building for Production
+## 🛠️ Development Commands
 
 ```bash
-npm run build
-npm start
+make help          # Show all commands
+make dev           # Start development (Docker Compose)
+make build         # Build Docker image
+make deploy        # Deploy to Kubernetes
+make clean         # Clean up Docker resources
+make logs          # Show application logs
 ```
 
 ## 📖 How to Use
@@ -112,42 +105,17 @@ npm start
 - **Learning Streaks** - Maintain daily learning habits
 - **Level Progression** - Advance through levels as you learn
 
-## 🏗️ Project Structure
+## 🏗️ Infrastructure
 
-```
-codeFlash/
-├── src/
-│   ├── app/                 # Next.js App Router pages
-│   │   ├── ui/             # shadcn/ui components
-│   │   ├── flashcards/     # Flashcard components
-│   │   └── quiz/           # Quiz components
-│   ├── lib/
-│   │   ├── data/           # Learning path data
-│   │   └── utils/          # Utility functions
-│   ├── store/              # State management
-│   └── types/              # TypeScript type definitions
-├── public/                 # Static assets
-└── components.json         # shadcn/ui configuration
-```
-
-## 🛠️ Development
-
-### Adding New Learning Paths
-1. Create a new file in `src/lib/data/learning-paths/`
-2. Define flashcards and quiz questions
-3. Export the learning path object
-4. Add to the index file
-
-### Customizing Components
-- UI components are in `src/components/ui/`
-- Learning components are in `src/components/`
-- Styling uses Tailwind CSS classes
-
-### State Management
-- Progress tracking uses localStorage
-- Component state managed with React hooks
-- No external state management library required
+For detailed information about Docker, Terraform, and Kubernetes setup, see [INFRASTRUCTURE.md](./INFRASTRUCTURE.md).
 
 ## 🤝 Contributing
 
-I welcome contributions to make CodeFlash even better!
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.

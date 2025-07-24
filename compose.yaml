@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  codeflash-app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app:delegated   # Mount current directory for live code sync
+      - /app/node_modules  # Prevent overwriting node_modules inside container
+    environment:
+      - NODE_ENV=development
+    command: npm run dev    # Run development server
+    networks:
+      - default
