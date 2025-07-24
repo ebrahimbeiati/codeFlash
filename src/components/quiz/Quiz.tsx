@@ -57,7 +57,10 @@ export function Quiz({ questions, onComplete }: QuizProps) {
 
   useEffect(() => {
     if (questions.length === 0) {
-      console.error('No questions provided to Quiz component');
+      // Only log error in development, not in tests
+      if (process.env.NODE_ENV === 'development' && !process.env.JEST_WORKER_ID) {
+        console.error('No questions provided to Quiz component');
+      }
       return;
     }
     // Shuffle questions on mount

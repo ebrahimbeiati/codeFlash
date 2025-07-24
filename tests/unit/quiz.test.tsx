@@ -2,8 +2,6 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Quiz } from '../../src/components/quiz/Quiz';
 
-console.log('Quiz import:', Quiz);
-
 // Mock canvas-confetti
 jest.mock('canvas-confetti', () => ({
   __esModule: true,

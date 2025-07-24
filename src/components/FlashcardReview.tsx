@@ -69,16 +69,6 @@ export function FlashcardReview({
   const currentCardInFiltered = cardsToShow[safeCurrentIndex] || cardsToShow[0];
   const isLastCardInFiltered = safeCurrentIndex === cardsToShow.length - 1;
 
-  // Debug logging
-  console.log('FlashcardReview Debug:', {
-    cardsLength: cards.length,
-    cardsToShowLength: cardsToShow.length,
-    currentIndex,
-    safeCurrentIndex,
-    currentCardInFiltered: !!currentCardInFiltered,
-    reviewMode
-  });
-
   // Load saved progress when component mounts
   useEffect(() => {
     const loadSavedProgress = () => {
