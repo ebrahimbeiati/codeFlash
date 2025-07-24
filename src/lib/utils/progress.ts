@@ -44,7 +44,10 @@ export const getUserProgress = (): UserProgress => {
       return JSON.parse(stored);
     }
   } catch (error) {
-    console.error('Error loading user progress:', error);
+    // Only log error in development, not in tests
+    if (process.env.NODE_ENV === 'development' && !process.env.JEST_WORKER_ID) {
+      console.error('Error loading user progress:', error);
+    }
   }
   
   return getDefaultProgress();
@@ -58,7 +61,10 @@ export const saveUserProgress = (progress: UserProgress): void => {
   try {
     localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
   } catch (error) {
-    console.error('Error saving user progress:', error);
+    // Only log error in development, not in tests
+    if (process.env.NODE_ENV === 'development' && !process.env.JEST_WORKER_ID) {
+      console.error('Error saving user progress:', error);
+    }
   }
 };
 
@@ -121,7 +127,10 @@ export const getFlashcardProgress = (pathId: string): Record<string, FlashcardSe
       return JSON.parse(stored);
     }
   } catch (error) {
-    console.error('Error loading flashcard progress:', error);
+    // Only log error in development, not in tests
+    if (process.env.NODE_ENV === 'development' && !process.env.JEST_WORKER_ID) {
+      console.error('Error loading flashcard progress:', error);
+    }
   }
   
   return {};
@@ -137,7 +146,10 @@ export const saveFlashcardProgress = (pathId: string, setId: string, progress: F
     existingProgress[setId] = progress;
     localStorage.setItem(`${FLASHCARD_PROGRESS_KEY}_${pathId}`, JSON.stringify(existingProgress));
   } catch (error) {
-    console.error('Error saving flashcard progress:', error);
+    // Only log error in development, not in tests
+    if (process.env.NODE_ENV === 'development' && !process.env.JEST_WORKER_ID) {
+      console.error('Error saving flashcard progress:', error);
+    }
   }
 };
 
