@@ -1,5 +1,3 @@
-# Simple Terraform configuration for codeFlash
-# Fast deployment without long waits
 
 terraform {
   required_version = ">= 1.0"
@@ -22,7 +20,7 @@ resource "kubernetes_namespace" "app" {
   }
 }
 
-# Simple deployment without wait
+# deployment without wait
 resource "kubernetes_deployment" "app" {
   metadata {
     name      = "codeflash-app"
